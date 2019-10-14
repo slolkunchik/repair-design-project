@@ -1,1 +1,1 @@
-To install and start my project you should write "sass style.scss style.css" in your terminal.
+To install and start my project you should write "sass sass/style.scss sass/style.css" in your terminal.

@@ -1,12 +1,21 @@
 @font-face {
   font-family: "FuturaDemiC";
-  src: url('FuturaDemiC.woff2') format('woff2');
+  src: url("../assets/fonts/FuturaDemiC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "FuturaBookC";
-  src: url('FuturaBookC.woff2') format('woff2');
+  src: url("../assets/fonts/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Yeseva One";
+  src: url("../assets/fonts/YesevaOne.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+

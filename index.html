@@ -40,46 +40,105 @@
 
     <main>
         <div class="main_img_container">
-            <div class="main_img_container--aside_instagram_wrapper"></div>
-            <div class="main_img_container--img"></div>
+            <div class="main_img_container--aside_instagram_wrapper">
+                <div class="aside_instagram_text">
+                    <p class="aside_instagram_text--paragraph"><a class="aside_instagram_text--link">instagram</a></p>
+                    <img class="aside_instagram_text--aside_vector" src="assets/images/instagram-vector.svg" alt="instagram vector" width="2" height="51">
+                </div>
+            </div>
+            <div class="main_img">
+                <h4 class="main_img--title">Turnkey Repair in the
+                    <br>city of <span class="main_img--title-yellow">Rostov-on-Don</span></h4>
+                <p class="main_img--text">Get ready-made turnkey repairs on time
+                    with work time saving up to 45 days and 20% from
+                    cost of materials due to the organization of work</p>
+                <input class="main_img--button main_img--button-hover" type="button" value="Calculate the cost">
+                <input class="main_img--button" type="button" value="Submit your application">
+            </div>
             <div class="main_img_container--scroll_down_block">
+                <p class="main_img_container--scroll_down_text">Scroll down</p>
+                <img class="main_img_container--scroll_down_button" src="assets/images/scroll-down.svg" alt="scroll down button" width="29" height="29">
             </div>
         </div>
 
         <div class="separator_links_container">
             <div class="separator_links_container--links_block">
-                <a href="#">Rostov-on-Don, Admiral</a>
+                <a class="separator_links_container--link separator_links_container--link-hover" href="#">Rostov-on-Don, Admiral</a>
+                <a class="separator_links_container--link" href="#">Sochi thieves</a>
+                <a class="separator_links_container--link" href="#">Rostov-on-Don Patriotic</a>
             </div>
         </div>
 
         <div class="completed_project_container">
             <div class="completed_project_container--text_block">
-                <div class="completed_project_container--description">
-                    <p>Completed projects</p>
-                    <p>Only a small part of the work performed by our company is presented on the site. For 14 years on
+                <div class="completed_project_description">
+                    <h3 class="completed_project_description--title">Completed
+                        <br>projects</h3> <img class="completed_project_description--title_vector" src="assets/images/cp-vector.png" alt="completed project vector" height="2" width="92">
+                    <p class="completed_project_description--text">Only a small part of the work performed by our company is presented on the site. For 14 years on
                         in the construction market we have made happy more than 1000 families</p>
-                    <div>
-                        city
+
+                    <div class="mobile_completed_project_container">
+                        <div class="mobile_completed_project_container--images_block">
+                            <div class="mobile_completed_project_container--arrow_left"></div>
+                            <div class="mobile_completed_project_container--arrow_right"></div>
+                            <img class="mobile_completed_project_container--image" src="assets/images/slider1.jpg" height="264" width="375" alt="mobile slider image">
+                            <div class="mobile_completed_project_container--img_separator"></div>
+                        </div>
+                    </div>
+
+                    <div class="completed_project_grid">
+                        <div class="completed_project_grid--item">
+                            <p class="completed_project_grid--subtitle">City:</p>
+                            <p class="completed_project_grid--text">Rostov-on-Don
+                                <br>LCD admiral</p>
+                        </div>
+                        <div class="completed_project_grid--item">
+                            <p class="completed_project_grid--subtitle">apartment area:</p>
+                            <p class="completed_project_grid--text">81 m2</p>
+                        </div>
+                        <div class="completed_project_grid--item completed_project_grid--item-end">
+                            <p class="completed_project_grid--subtitle">Repair time:</p>
+                            <p class="completed_project_grid--text">3.5 months</p>
+                        </div>
+                        <div class="completed_project_grid--item completed_project_grid--item-end">
+                            <p class="completed_project_grid--subtitle">Repair Cost:</p>
+                            <p class="completed_project_grid--text">Upon request</p>
+                        </div>
+
                     </div>
                 </div>
-                <div class="completed_project_container--links">
-                    <div>
-                        repair time
-                    </div>
+
+                <div class="completed_project_links">
+                    <div class="completed_project_links--prev_arrow"><img src="assets/images/left-arrow.svg" /></div>
+                    <div class="completed_project_links--link completed_project_links--link-hover"></div>
+                    <div class="completed_project_links--link"></div>
+                    <div class="completed_project_links--link"></div>
+                    <div class="completed_project_links--next_arrow"><img src="assets/images/right-arrow.svg" /></div>
                 </div>
             </div>
             <div class="completed_project_container--slider_block">
+                <div class="completed_project_container--arrow_right"></div>
                 <div class="completed_project_container--images_block">
-                    <img src="assets/images/slider1.png" height="482" width="679" alt="slider image 1">
+                    <img class="completed_project_container--images_block-first" src="assets/images/slider1.jpg" height="482" width="680" alt="slider image 1">
+                    <div class="completed_project_container--img_separator"></div>
+                    <img class="completed_project_container--images_block-second" src="assets/images/slider2.jpg" height="482" width="680" alt="slider image 2">
                 </div>
             </div>
         </div>
 
         <section class="video_container">
-            <div>camera</div>
-            <div>video</div>
-            <div>separator</div>
-            <div><p>At each facility, a camera is installed that broadcasts the progress of work on the clock. At any
+            <div><h3 class="video_container_title">Online Control</h3></div>
+            <div class="video_container_separator">
+                <img class="video_container_separator--left_vector" src="./assets/images/camera-separator.png" width="32" height="3"/>
+                <img class="video_container_separator--camera" src="./assets/images/camera.png"/>
+                <img class="video_container_separator--right_vector" src="./assets/images/camera-separator.png"/>
+            </div>
+            <video class="video_container_video" width="817" height="434" controls="controls">
+                <source src="https://youtu.be/l3yHLikvjPU">
+            </video>
+            <div class="video_container_background_box"></div>
+            <div class="video_container_vector_block"><img class="video_container_vector_block--img" src="./assets/images/video-separator.png" width="55" height="3"></div>
+            <div class="video_container_text"><p class="video_container_text--paragraph">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any
                 time, you can go to our website and monitor the progress of work in your apartment. You can watch the
                 live broadcast from one of our facilities! Leave a request below and you will receive a link to the
                 broadcast.</p></div>
@@ -145,7 +204,7 @@
                     <div>separator</div>
                     <div>
                         <p>1/6</p>
-                        <h3>Departure for measurements premises</h3>
+                        <h4>Departure for measurements premises</h4>
                         <p>After your call, we go to you to consult and measure the premises of your apartment. During
                             our meeting, you can ask absolutely any number of questions. An appraiser-appraiser leaves
                             to measure the room. He will advise you on the issues of repair technology, apartment
