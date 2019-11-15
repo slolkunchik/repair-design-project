@@ -127,41 +127,121 @@
         </div>
 
         <section class="video_container">
-            <div><h3 class="video_container_title">Online Control</h3></div>
+            <h3 class="video_container_title">Online Control</h3>
             <div class="video_container_separator">
-                <img class="video_container_separator--left_vector" src="./assets/images/camera-separator.png" width="32" height="3"/>
+                <img class="video_container_separator--left_vector" src="./assets/images/camera-separator.png" alt="left-vector" width="32" height="3"/>
                 <img class="video_container_separator--camera" src="./assets/images/camera.png"/>
-                <img class="video_container_separator--right_vector" src="./assets/images/camera-separator.png"/>
+                <img class="video_container_separator--right_vector" src="./assets/images/camera-separator.png" alt="right-vector" width="32" height="3"/>
             </div>
-            <video class="video_container_video" width="817" height="434" controls="controls">
-                <source src="https://youtu.be/l3yHLikvjPU">
-            </video>
+            <div class="video_container_video">
+                <iframe class="video_container_video--frame" width="817" height="434" controls="controls" src="https://www.youtube.com/embed/l3yHLikvjPU">
+                </iframe>
+                <div class="video_container_video--controls">
+                    <img class="video_container_video--controls_img" src="assets/images/video-controler.png" alt="video controls" >
+                </div>
+            </div>
             <div class="video_container_background_box"></div>
             <div class="video_container_vector_block"><img class="video_container_vector_block--img" src="./assets/images/video-separator.png" width="55" height="3"></div>
             <div class="video_container_text"><p class="video_container_text--paragraph">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any
                 time, you can go to our website and monitor the progress of work in your apartment. You can watch the
-                live broadcast from one of our facilities! Leave a request below and you will receive a link to the
+                live broadcast from one of our facilities! </br>
+                Leave a request below and you will receive a link to the
                 broadcast.</p></div>
         </section>
 
-        <div class="registration_form">
-            <input type="text" placeholder="What is you name:">
-            <input type="text" placeholder="Your phone number:">
-            <input type="checkbox"> I agree to processing of personal data
+        <div class="registration">
+            <form class="registration_form" method="get" action="https://lmgtfy.com/?s=g" >
+                <div class="registration_fields">
+                    <div class="registration_form_field">
+                        <label class="registration_form_field--label" for="clientName">Name</label>
+                        <input class="registration_form_field--text" type="text" name="clientName" id="clientName" required pattern="[a-z]{1,15}"
+                               title="Username should only contain lowercase letters. e.g. john" placeholder="What is you name:">
+                    </div>
+
+                    <div class="registration_form_field">
+                        <label class="registration_form_field--label" for="phone">Phone</label>
+                        <input class="registration_form_field--text" type="tel" name="phone" id="phone" title="Format: 123-456-7890" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number:">
+                    </div>
+
+                    <div class="registration_form_field">
+                        <input class="registration_form_field--button" type="submit" value="Submit"/>
+                    </div>
+                </div>
+
+                <div class="registration_form_agreement">
+                    <div class="agreement_controls">
+                        <input class="agreement_controls--box" type="checkbox" checked="true">
+                        <p class="agreement_controls--text">I agree to processing of personal data</p>
+                        <span class="agreement_controls--checkmark"></span>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <section class="types_of_repair_container">
-            <h2>types of repair</h2>
-            <div>separator</div>
-            <div class="types_of_repair_container--columns_types">
-                <article class="types_of_repair_container--type">
-
+            <h2 class="types_of_repair_container--title">types of repair</h2>
+            <div class="types_of_repair_separator">
+                <img class="types_of_repair_separator--left_vector" src="./assets/images/camera-separator.png" alt="left-vector" width="32" height="3"/>
+                <img class="types_of_repair_separator--tools" src="./assets/images/tools.png" alt="tools" width="28" height="28"/>
+                <img class="types_of_repair_separator--right_vector" src="./assets/images/camera-separator.png" alt="right-vector" width="32" height="3"/>
+            </div>
+            <div class="types_of_repair_columns">
+                <article class="types_of_repair_columns--type types_of_repair_columns--type1">
+                    <div class="types_of_repair_columns--textbox">
+                        <h4 class="types_of_repair_columns--textbox_title">Redecorating</h4>
+                        <div class="types_of_repair_columns--textbox_inner">
+                            <ul class="types_of_repair_columns--textbox_list">
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="types_of_repair_columns--prices">
+                        <p class="types_of_repair_columns--prices_text">from 900 rub / m2</p>
+                    </div>
                 </article>
-                <article class="types_of_repair_container--type">
-
+                <article class="types_of_repair_columns--type types_of_repair_columns--type2">
+                    <div class="types_of_repair_columns--textbox">
+                        <h4 class="types_of_repair_columns--textbox_title">Overhaul</h4>
+                        <div class="types_of_repair_columns--textbox_inner">
+                            <ul class="types_of_repair_columns--textbox_list">
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="types_of_repair_columns--prices">
+                        <p class="types_of_repair_columns--prices_text">from 1800 rub / m2</p>
+                    </div>
                 </article>
-                <article class="types_of_repair_container--type">
-
+                <article class="types_of_repair_columns--type types_of_repair_columns--type3">
+                    <div class="types_of_repair_columns--textbox">
+                        <h4 class="types_of_repair_columns--textbox_title">Designer Repair</h4>
+                        <div class="types_of_repair_columns--textbox_inner">
+                            <ul class="types_of_repair_columns--textbox_list">
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="types_of_repair_columns--prices">
+                        <p class="types_of_repair_columns--prices_text">from 4000 rub / m2</p>
+                    </div>
                 </article>
             </div>
         </section>
