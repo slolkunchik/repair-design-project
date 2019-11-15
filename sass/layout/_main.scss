@@ -387,7 +387,7 @@
   &--arrow_left {
     width: 36px;
     height: 36px;
-    background-image: url("../assets/images/round-arrow-left.png");
+    background-image: url("../assets/images/arrows/round-arrow-left.png");
     position: absolute;
     top: 103px;
     left: 31px;
@@ -399,7 +399,7 @@
   &--arrow_right {
     width: 36px;
     height: 36px;
-    background-image: url("../assets/images/round-arrow-right.png");
+    background-image: url("../assets/images/arrows/round-arrow-right.png");
     position: absolute;
     top: 103px;
     right: 31px;
@@ -731,7 +731,7 @@
     line-height: 34px;
     text-align: center;
 
-    color: #363636;
+    color: $black-background;
     @media (max-width: 767.98px) {
       font-size: 14px;
       line-height: 24px;
@@ -791,7 +791,7 @@
     font-family: $FuturaBookC;
     font-size: 18px;
     line-height: 24px;
-    color: #363636;
+    color: $black-background;
     border: 0;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     @media (max-width: 767.98px) {
@@ -964,7 +964,7 @@
     position: relative;
     width: 392px;
     height: 608px;
-    margin: 15px;
+    margin: 15px 15px 0 15px;
     @media (max-width: 767.98px) {
       position: relative;
       width: 340px;
@@ -1010,7 +1010,7 @@
     margin-top:0;
     margin-bottom:0;
 
-    color: #363636;
+    color: $black-background;
     @media (max-width: 767.98px) {
       font-size: 15px;
       line-height: 21px;
@@ -1063,49 +1063,437 @@
 /* the end of types_of_repair_container block */
 
 .request_container {
-  height: 849px;
 
+  height: 979px;
   display: flex;
   justify-content: space-between;
+  padding-top: 124px;
 
-  &--steps {
-    height: 100%;
-    width: 780px;
-    background-color: rgba(100, 100, 10, 0.8);
+  &--steps_box {
+    height: 645px;
+    min-width: 773px;
+    width: 54%;
+    background-image: url("../assets/images/houses.png");
+    background-repeat: no-repeat;
   }
 
-  &--form {
+  &--form_box {
     height: 100%;
     width: 505px;
-    background-color: rgba(100, 100, 10, 0.8);
+    padding-top: 106px;
+    margin-right: 7%;
+  }
+
+  &--description_box {
+      width: 636px;
+      height: 636px;
+      border-style: solid;
+      border-color: $font-yellow-color;
+      border-width: 3px;
+      border-left-color: transparent;
+      border-radius: 50%;
+      position:relative;
+      top:60px;
+      left:-160px;
+  }
+  @media (max-width: 1199.98px) {
+    display: none;
   }
 }
+.request_container_outer {
+  width: 70px;
+  height: 70px;
+  background-color: $white-color;
+  position: absolute;
+  border-radius: 50%;
+  &--first {
+    top: 35px;
+    left: 484px;
+  }
+  &--second {
+    top: 160px;
+    left: 570px;
+  }
+  &--third {
+    top: 310px;
+    left: 593px;
+  }
+  &--fourth {
+    top: 476px;
+    left: 530px;
+  }
+}
+
+.request_container_text {
+  width: 364px;
+  position: absolute;
+  font-family: $FuturaMediumC;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: $black-background;
+
+  &--first {
+    top: 48px;
+    left: 564px;
+  }
+  &--second {
+    top: 183px;
+    left: 640px;
+  }
+  &--third {
+    top: 335px;
+    left: 668px;
+  }
+  &--fourth {
+    top: 491px;
+    left: 607px;
+  }
+}
+
+.request_container_inner {
+  width: 45px;
+  height: 45px;
+  background-color: $font-yellow-color;
+  border-radius: 50%;
+  margin: 12px;
+  font-family: $YesevaOne;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  padding: 10px;
+  color: $white-color;
+}
+
+.request_title {
+  background-color: $dark-background-color;
+  height: 114px;
+  padding-top: 28px;
+  margin: 0;
+  font-family: $FuturaDemiC;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: $white-color;
+}
+.request_form {
+  background-color: $dark-background-color;
+  height: 380px;
+  padding: 0 49px 0 49px;
+}
+.request_fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 244px;
+  width: 408px;
+  margin: 0 auto;
+}
+.request_help {
+  height: 72px;
+  padding: 0 33px;
+  background-color: $white-color;
+}
+
+.request_form_field {
+  &--label {
+    width: 408px;
+    font-family: $FuturaBookC;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &--text {
+    width: 408px;;
+    font-family: $FuturaMediumC;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: $request-background;
+    color: $white-color;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  &--text::placeholder {
+    color: $white-color;
+  }
+
+  &--button {
+    height: 51px;
+    width: 213px;
+    float: right;
+    margin-top: 10px;
+    background: $font-yellow-color;
+    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
+    font-family: $FuturaDemiC;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-color;
+    border: 1px solid $font-yellow-color;
+    cursor: pointer;
+  }
+}
+
+.request_form_agreement {
+  width: 408px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+.request_agreement_controls {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: $FuturaDemiC;
+  font-size: 18px;
+  color: $white-color;
+
+  &--box {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &--text {
+    font-family: $FuturaBookC;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $white-color;
+  }
+
+  &--checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    background-color: $font-yellow-color;
+  }
+
+  &--checkmark:after {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+  }
+}
+
+.request_help_inner {
+  display:flex;
+  margin-top:30px;
+  width: 341px;
+
+  &--logo {
+    width: 113px;
+  }
+  &--text {
+    font-family: $FuturaDemiC;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top:20px;
+    color: $font-yellow-color;
+    width: 344px;
+  }
+}
+
+/* the end of request_container block */
 
 .styles_examples_container {
   display: flex;
   justify-content: space-between;
   background: url("../assets/images/styles-background.png");
   background-size: cover;
-  margin-top: 243px;
+  margin-top: 114px;
   margin-bottom: 41px;
-  height: 1018px;
-
-  &--links {
-    width: 411px;
-    height: 100%;
-    background-color: rgba(100, 100, 10, 0.7);
+  padding-left: 99px;
+  padding-right: 59px;
+  height: 864px;
+  position: relative;
+  @media (max-width: 575.98px) {
+    display: none;
   }
-
-  &--examples_images {
-    width: 753px;
-    height: 100%;
-    background-color: rgba(100, 100, 10, 0.7);
-  }
-
 }
+
+.mobile_styles {
+  display: none;
+  @media (max-width: 575.98px) {
+    display: block;
+    margin-top: 55px;
+    padding: 0 auto;
+    height: 211px;
+  }
+  &--title {
+    font-family: $YesevaOne;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $font-yellow-color;
+  }
+
+  &--img_container {
+    position: relative;
+    width: 340px;
+    height: 121px;
+    margin: 24px auto 0 auto;
+  }
+
+  &--img {
+    @media (max-width: 575.98px) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 340px;
+      height: 242px;
+      background-image: url("../assets/images/mobile-styles-background.jpg");
+    }
+  }
+
+  &--arrow_left {
+    position: absolute;
+    z-index: 2;
+    top: 103px;
+    left: 14px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../assets/images/arrows/round-arrow-left.png");
+    cursor: pointer;
+  }
+
+  &--arrow_right {
+    position: absolute;
+    z-index: 2;
+    top: 103px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../assets/images/arrows/round-arrow-right.png");
+  }
+
+  &--arrow_right:hover {
+    background-color: $white-color;
+  }
+
+  &--arrow_left:hover {
+    background-color: $white-color;
+  }
+}
+
+.styles_examples_container_inner {
+  position: absolute;
+  width: 794px;
+  top: -114px;
+  height: 1068px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.styles_examples_images {
+  width: 794px;
+  height: 100%;
+
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+
+  &--element {
+    width: 354px;
+    margin-right: 5.4%;
+    margin-bottom: 40px;
+  }
+
+  &--element-first {
+    margin-top: 73px;
+  }
+  &--element-third {
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+  &--element-fourth {
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+}
+
+.styles_examples_list {
+  width: 411px;
+  height: 516px;
+  padding-top: 138px;
+  @media (max-width: 1199.98px) {
+    width: 80%;
+  }
+
+  &--title {
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $font-yellow-color;
+    padding-bottom: 47px;
+  }
+
+  &--inner_block{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &--inner_block_item {
+    display: inline-block;
+    font-family: $ProximaNova;
+    font-size: 20px;
+    line-height: 34px;
+    color: $white-color;
+    height: 34px;
+    cursor: pointer;
+  }
+
+  &--inner_block_item:hover {
+    border-bottom: 1px solid $font-yellow-color;
+    display: inline-block;
+    color: $font-yellow-color;
+  }
+
+  &--inner_block_item-first {
+    border-bottom: 1px solid $font-yellow-color;
+    display: inline-block;
+    color: $font-yellow-color;
+  }
+}
+
+/* the end of styles_examples_container block */
 
 .design_project_container {
   position: relative;
+  padding-top: 173px;
   min-height: 620px;
 
   &--columns_types {

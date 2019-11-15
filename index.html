@@ -170,7 +170,7 @@
 
                 <div class="registration_form_agreement">
                     <div class="agreement_controls">
-                        <input class="agreement_controls--box" type="checkbox" checked="true">
+                        <input class="agreement_controls--box" type="checkbox" required checked="true">
                         <p class="agreement_controls--text">I agree to processing of personal data</p>
                         <span class="agreement_controls--checkmark"></span>
                     </div>
@@ -245,16 +245,161 @@
                 </article>
             </div>
         </section>
-
         <div class="request_container">
-            <div class="request_container--steps">Steps</div>
-            <div class="request_container--form">form</div>
+            <div class="request_container--steps_box">
+                <div class="request_container--description_box">
+                    <div class="request_container_outer request_container_outer--first">
+                        <div class="request_container_inner">
+                            01
+                        </div>
+                    </div>
+                    <div class="request_container_text request_container_text--first">
+                        Our specialist will arrive for measurements per day contact, or appoint a date convenient for you
+                    </div>
+
+                    <div class="request_container_outer request_container_outer--second">
+                        <div class="request_container_inner">
+                            02
+                        </div>
+                    </div>
+                    <div class="request_container_text request_container_text--second">
+                        Free metering
+                    </div>
+
+                    <div class="request_container_outer request_container_outer--third">
+                        <div class="request_container_inner">
+                            03
+                        </div>
+                    </div>
+                    <div class="request_container_text request_container_text--third">
+                        Free consultation
+                    </div>
+
+                    <div class="request_container_outer request_container_outer--fourth">
+                        <div class="request_container_inner">
+                            04
+                        </div>
+                    </div>
+                    <div class="request_container_text request_container_text--fourth">
+                        Get a cost estimate and
+                        </br> the timing of your future repairs
+                    </div>
+                </div>
+            </div>
+            <div class="request_container--form_box">
+                <h6 class="request_title">Leave a request for free
+                    </br>departure of the measurer
+                </h6>
+                <form class="request_form" method="get" action="https://lmgtfy.com/?s=g" >
+                    <div class="request_fields">
+                        <div class="request_form_field">
+                            <label class="request_form_field--label" for="request_clientName">Name</label>
+                            <input class="request_form_field--text" type="text" name="request_clientName"
+                                   id="request_clientName" required pattern="[a-z]{1,15}"
+                                   title="Username should only contain lowercase letters. e.g. john"
+                                   placeholder="What is you name:">
+                        </div>
+                        <div class="request_form_field">
+                            <label class="request_form_field--label" for="request_phone">Phone</label>
+                            <input class="request_form_field--text" type="tel" name="request_phone" id="request_phone"
+                                   title="Format: 123-456-7890" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                   placeholder="Your phone number:">
+                        </div>
+                        <div class="request_form_field">
+                            <label class="request_form_field--label" for="request_email">Phone</label>
+                            <input class="request_form_field--text" type="email" name="request_email" id="request_email"
+                                   required placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="request_form_agreement">
+                        <div class="request_agreement_controls">
+                            <input class="request_agreement_controls--box" type="checkbox" required checked="true">
+                            <p class="request_agreement_controls--text">I agree to processing of personal data</p>
+                            <span class="request_agreement_controls--checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="request_form_field">
+                        <input class="request_form_field--button" type="submit" value="Call the Measurer"/>
+                    </div>
+                </form>
+                <div class="request_help">
+                    <div class="request_help_inner">
+                        <div class="request_help_inner--logo"><img src="assets/images/pig.png" alt="Save your money" width="113" height="113"/></div>
+                        <div class="request_help_inner--text">Help save 10 - 20% of the cost of materials</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="styles_examples_container">
-            <div class="styles_examples_container--links"></div>
-            <div class="styles_examples_container--examples_images"></div>
+            <div class="styles_examples_list">
+                <div class="styles_examples_list--title">
+                    We realize your <br/> wildest fantasies
+                </div>
+                <ul class="styles_examples_list--inner_block">
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item-first styles_examples_list--inner_block_item">
+                        American classic
+                        </span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Empire</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                       <span class="styles_examples_list--inner_block_item">Classical</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Loft</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Minimalism</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Provence</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Romanticism</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Scandinavian style</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Mediterranean style</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">High tech</span>
+                    </li>
+                    <li class="styles_examples_list--inner_block_element">
+                        <span class="styles_examples_list--inner_block_item">Eclecticism</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="styles_examples_images">
+                <div class="styles_examples_container_inner">
+                    <div class="styles_examples_images--element styles_examples_images--element-first">
+                        <img src="assets/images/styles/first.png" alt="first image" height="557" width="354"/>
+                    </div>
+                    <div class="styles_examples_images--element styles_examples_images--element-second">
+                        <img src="assets/images/styles/second.png" alt="second image" height="350" width="354"/>
+                    </div>
+                    <div class="styles_examples_images--element styles_examples_images--element-third">
+                        <img src="assets/images/styles/third.png" alt="third image" height="275" width="354"/>
+                    </div>
+                    <div class="styles_examples_images--element styles_examples_images--element-fourth">
+                        <img src="assets/images/styles/fourth.png" alt="fourth image" height="625" width="354"/>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <div class="mobile_styles">
+            <div class="mobile_styles--title">
+                We realize your <br/> wildest fantasies
+            </div>
+            <div class="mobile_styles--img_container">
+                <div class="mobile_styles--img"></div>
+                <div class="mobile_styles--arrow_left"></div>
+                <div class="mobile_styles--arrow_right"></div>
+            </div>
+        </div>
         <section class="design_project_container">
             <h2>design project</h2>
             <div>separator</div>
@@ -271,11 +416,7 @@
                     project 3
                 </article>
             </div>
-
-
         </section>
-
-
         <div class="goal_steps_container">
             <div class="goal_steps_container--article">
                 <article>
