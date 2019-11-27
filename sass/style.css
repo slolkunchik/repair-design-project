@@ -961,16 +961,22 @@ a {
   font-family: "FuturaBookC", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  color: #363636;
   border: 0;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
 }
 @media (max-width: 767.98px) {
   .registration_form_field--text {
     width: 340px;
-    color: #FFFFFF;
     background-color: #252525;
     border-bottom: 1px solid #FFFFFF;
+  }
+}
+.registration_form_field--text::placeholder {
+  color: #363636;
+}
+@media (max-width: 767.98px) {
+  .registration_form_field--text::placeholder {
+    color: #FFFFFF;
   }
 }
 .registration_form_field--button {
@@ -2410,6 +2416,216 @@ a {
 }
 
 /* the end of our_clients_container block */
+.bottom_form_background {
+  position: relative;
+  max-width: 883px;
+  height: 260px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+@media (max-width: 575.98px) {
+  .bottom_form_background {
+    height: 0;
+  }
+}
+
+.bottom_form_container {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  padding: 34px;
+  background-color: #181818;
+}
+@media (max-width: 575.98px) {
+  .bottom_form_container {
+    position: static;
+    padding: 22px 18px 0 18px;
+    background-color: #252525;
+  }
+}
+.bottom_form_container--title {
+  margin-top: 0;
+  margin-bottom: 44px;
+  font-family: "Yeseva One", "Georgia", serif;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 575.98px) {
+  .bottom_form_container--title {
+    margin-bottom: 52px;
+  }
+}
+
+.bottom_form {
+  width: 520px;
+  margin: 0 auto;
+}
+@media (max-width: 575.98px) {
+  .bottom_form {
+    width: 340px;
+  }
+}
+.bottom_form--fields_box {
+  display: grid;
+  grid-column-gap: 60px;
+  grid-row-gap: 49px;
+  grid-template-columns: 231px 231px;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--fields_box {
+    grid-template-columns: 340px;
+    grid-template-rows: 45px 45px 45px;
+    grid-row-gap: 63px;
+  }
+}
+.bottom_form--button_box {
+  width: 200px;
+  margin: 0 auto;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--button_box {
+    width: 340px;
+  }
+}
+.bottom_form--field-last {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--field-last {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+.bottom_form--label {
+  width: 231px;
+  font-family: "FuturaBookC", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 575.98px) {
+  .bottom_form--label {
+    width: 340px;
+  }
+}
+.bottom_form--text {
+  width: 231px;
+  font-family: "FuturaBookC", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #181818;
+  color: #FFFFFF;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--text {
+    width: 340px;
+    background-color: #252525;
+  }
+}
+.bottom_form--text::placeholder {
+  color: #FFFFFF;
+}
+.bottom_form--text-last, .bottom_form--label-last {
+  width: 517px;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--text-last, .bottom_form--label-last {
+    width: 340px;
+  }
+}
+.bottom_form--agreement {
+  width: 286px;
+  margin: 43px auto 47px auto;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--agreement {
+    margin: 21px 0 67px 0;
+  }
+}
+.bottom_form--controls {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "FuturaDemiC", "Arial", sans-serif;
+  font-size: 18px;
+  color: #181818;
+}
+.bottom_form--controls_box {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.bottom_form--controls_text {
+  font-family: "FuturaBookC", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.bottom_form--controls_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  background-color: #E3B873;
+}
+.bottom_form--controls_checkmark:after {
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+.bottom_form--button {
+  height: 51px;
+  width: 200px;
+  margin: 0 auto;
+  background: #E3B873;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+  font-family: "FuturaDemiC", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 1px solid #181818;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  .bottom_form--button {
+    width: 340px;
+    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+    border: 1px solid #252525;
+  }
+}
+
+/* the end of bottom_form_container block */
 .map_container {
   height: 954px;
   background: plum;
