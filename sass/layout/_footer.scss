@@ -1,4 +1,7 @@
 .footer_block {
   height: 133px;
   background-color: $dark-background-color;
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }
