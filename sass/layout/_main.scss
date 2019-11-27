@@ -2166,9 +2166,11 @@
 /* the end of our_team_container block */
 
 .our_clients_container {
-  margin-top:100px;
-  height: 1071px;
+  margin-top: 90px;
   background-color: white;
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 
   &--title {
     margin: 0;
@@ -2179,18 +2181,11 @@
     text-align: center;
     text-transform: uppercase;
     color: $black-color;
-
-    @media (max-width: 991.98px) {
-      font-size: 22px;
-      line-height: 30px;
-      color: $white-color;
-      padding-bottom: 16px;
-    }
   }
 
   &--separator {
-    width: 114px;
     position: relative;
+    width: 114px;
     margin: 0 auto;
   }
 
@@ -2202,7 +2197,7 @@
 
   &--icon_tool {
     position: absolute;
-    width: 28px;
+    width: 34px;
     height: 28px;
     left: 40px;
   }
@@ -2210,44 +2205,98 @@
   &--right_vector {
     position: absolute;
     top: 15px;
-    right: 5px;
+    right: 0;
   }
 
   &--text {
-    width: 763px;
-    margin: 50px auto 39px auto;
+    width: 476px;
+    margin: 52px auto 39px auto;
     font-family: $FuturaBookC;
     font-size: 20px;
     line-height: 27px;
     text-align: center;
 
     color: $black-background;
-    @media (max-width: 991.98px) {
-      width: 334px;
-      margin: 51px auto 39px auto;
-      font-size: 15px;
-      line-height: 20px;
-      text-align: center;
-      color: $white-color;
-    }
   }
 
   &--clients_types {
     width: 100%;
-    height: 455px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
   &--client {
-    height: 100%;
-    width: 455px;
-
-    background-color: aquamarine;
+    position: relative;
+    width: 376px;
+    height: 428px;
+    padding: 24px 32px 0 20px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    margin-bottom: 120px;
   }
+
+  &--client_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  &--client_name {
+    padding-left: 23px;
+    font-family: $YesevaOne;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black-color;
+    margin: 0;
+  }
+
+  &--review_text {
+    font-family: $FuturaBookC;
+    font-size: 15px;
+    line-height: 27px;
+    color: #959595;
+    text-transform: lowercase;
+  }
+
+  &--review_sentence {
+    display: inline-block;
+  }
+
+  &--review_sentence::first-letter {
+    text-transform: capitalize;
+  }
+
+  &--scope_of_work_box {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 135px 159px;
+    height: 54px;
+    width: 295px;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    background-color: $white-color;
+  }
+
+  &--scope_of_work {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $font-yellow-color;
+  }
+
+  &--size {
+    font-family: $YesevaOne;
+    font-size: 17px;
+    line-height: 24px;
+
+    color: $white-color;
+  }
+
 }
+
+/* the end of our_clients_container block */
 
 .map_container {
   height: 954px;

@@ -2296,9 +2296,13 @@ a {
 
 /* the end of our_team_container block */
 .our_clients_container {
-  margin-top: 100px;
-  height: 1071px;
+  margin-top: 90px;
   background-color: white;
+}
+@media (max-width: 575.98px) {
+  .our_clients_container {
+    display: none;
+  }
 }
 .our_clients_container--title {
   margin: 0;
@@ -2310,17 +2314,9 @@ a {
   text-transform: uppercase;
   color: #181818;
 }
-@media (max-width: 991.98px) {
-  .our_clients_container--title {
-    font-size: 22px;
-    line-height: 30px;
-    color: #FFFFFF;
-    padding-bottom: 16px;
-  }
-}
 .our_clients_container--separator {
-  width: 114px;
   position: relative;
+  width: 114px;
   margin: 0 auto;
 }
 .our_clients_container--left_vector {
@@ -2330,47 +2326,90 @@ a {
 }
 .our_clients_container--icon_tool {
   position: absolute;
-  width: 28px;
+  width: 34px;
   height: 28px;
   left: 40px;
 }
 .our_clients_container--right_vector {
   position: absolute;
   top: 15px;
-  right: 5px;
+  right: 0;
 }
 .our_clients_container--text {
-  width: 763px;
-  margin: 50px auto 39px auto;
+  width: 476px;
+  margin: 52px auto 39px auto;
   font-family: "FuturaBookC", "Arial", sans-serif;
   font-size: 20px;
   line-height: 27px;
   text-align: center;
   color: #363636;
 }
-@media (max-width: 991.98px) {
-  .our_clients_container--text {
-    width: 334px;
-    margin: 51px auto 39px auto;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-}
 .our_clients_container--clients_types {
   width: 100%;
-  height: 455px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .our_clients_container--client {
-  height: 100%;
-  width: 455px;
-  background-color: aquamarine;
+  position: relative;
+  width: 376px;
+  height: 428px;
+  padding: 24px 32px 0 20px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  margin-bottom: 120px;
+}
+.our_clients_container--client_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.our_clients_container--client_name {
+  padding-left: 23px;
+  font-family: "Yeseva One", "Georgia", serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+  margin: 0;
+}
+.our_clients_container--review_text {
+  font-family: "FuturaBookC", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 27px;
+  color: #959595;
+  text-transform: lowercase;
+}
+.our_clients_container--review_sentence {
+  display: inline-block;
+}
+.our_clients_container--review_sentence::first-letter {
+  text-transform: capitalize;
+}
+.our_clients_container--scope_of_work_box {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: 135px 159px;
+  height: 54px;
+  width: 295px;
+  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+  background-color: #FFFFFF;
+}
+.our_clients_container--scope_of_work {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #E3B873;
+}
+.our_clients_container--size {
+  font-family: "Yeseva One", "Georgia", serif;
+  font-size: 17px;
+  line-height: 24px;
+  color: #FFFFFF;
 }
 
+/* the end of our_clients_container block */
 .map_container {
   height: 954px;
   background: plum;
