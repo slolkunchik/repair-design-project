@@ -436,7 +436,7 @@
   &--link {
     width: 10px;
     height: 10px;
-    margin-right: 15px;
+    margin-right: 18px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.3);
     display: inline-block;
@@ -445,12 +445,24 @@
     pointer-events: auto;
   }
 
+  &--link:hover {
+    background-color: $white-color;
+  }
+
   &--prev_arrow {
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
     pointer-events: auto;
-    margin-right: 15px;
+    margin-right: 30px;
+  }
+
+  &--prev_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--next_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   &--next_arrow{
@@ -458,6 +470,7 @@
     vertical-align: middle;
     cursor: pointer;
     pointer-events: auto;
+    margin-left: 12px;
   }
 
   &--link-hover {
@@ -1608,7 +1621,7 @@
     position: relative;
     height: 100%;
     width: 392px;
-    height: 729px;
+    height: 688px;
     margin: 0 15px 15px 15px;
 
     @media (max-width: 991.98px) {
@@ -1712,37 +1725,253 @@
   }
 }
 
+/* the end of design_project_container block */
+
 .goal_steps_container {
-  padding-top: 428px;
-  height: 1210px;
-
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0 7%;
+  height: 100%;
+  background-color: $dark-background-color;
+  @media (max-width: 991.98px) {
+    background-color: $mobile-black-bg;
+  }
+  @media (max-width: 767.98px) {
+    display: none;
+  }
 
-  background-color: #131313;
 
   &--article {
-    width: 515px;
-    color: #ffffff;
+    min-width: 337px;
+    color: $white-color;
+  }
+
+  &--upper_text {
+    font-family: $FuturaDemiC;
+    font-size: 15px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  &--title {
+    display: inline-block;
+    margin: 18px 58px 92px 0;
+    font-family: $YesevaOne;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    color: $font-yellow-color;
+  }
+
+  &--title_vector {
+    margin-bottom: 12px;
   }
 
   &--steps_block {
-    width: 766px;
+    display: flex;
+    margin-top: 87px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 61.8%;
   }
 
   &--steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 28%;
+    grid-row-gap: 36px;
     width: 100%;
     height: 178px;
-    margin: 45px 0;
-    background-color: white;
+    @media (max-width: 1199.98px) {
+      grid-column-gap: 10%;
+    }
+    @media (max-width: 991.98px) {
+      grid-column-gap: 2%;
+    }
+  }
+
+  &--step_item {
+    opacity: 0.3;
+    cursor: pointer;
+
+    &-selected {
+      opacity: 1;
+    }
+  }
+
+  &--step_item:hover {
+    opacity: 1;
+  }
+
+  &--inner_item {
+    width: 125px;
+  }
+
+  &--step_number {
+    display: inline-block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $font-yellow-color;
+    font-family: $YesevaOne;
+    font-size: 15px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &--step_text {
+    font-family: $FuturaBookC;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: $white-color;
+  }
+
+  &--img {
+    height: 376px;
+    max-width: 765px;
+    margin-top: 45px;
+    background-image: url("../assets/images/goal-steps.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (max-width: 1199.98px) {
+      height: 314px;
+    }
+    @media (max-width: 991.98px) {
+      height: 255px;
+    }
   }
 }
 
+.goal_steps_description {
+
+  &--pages {
+    font-family: $YesevaOne;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+
+  &--subtitle {
+    margin: 22px 0 16px 0;
+    width: 262px;
+    font-family: $YesevaOne;
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: $font-yellow-color;
+  }
+
+  &--text {
+    width: 337px;
+    height: 222px;
+    margin-bottom: 61px;
+    font-family: $FuturaBookC;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: $white-color;
+  }
+
+  &--prev_arrow {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-right: 30px;
+  }
+
+  &--prev_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--next_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--next_arrow{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 12px;
+  }
+
+  &--circle {
+    width: 10px;
+    height: 10px;
+    margin-right: 18px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  &--circle:hover {
+    background-color: $white-color;
+  }
+
+  &--circle-hover {
+    background-color: $white-color;
+  }
+}
+
+/* the end of goal_steps_description block */
+
 .our_team_container {
   position: relative;
+  padding-top: 95px;
   min-height: 407px;
   background-color: $dark-background-color;
   color: white;
+
+  &--title {
+    width: 196px;
+    margin: 0 auto;
+    padding-bottom: 13px;
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 28px;
+    color: $white-color;
+    text-align: center;
+    @media (max-width: 767.98px) {
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 17px;
+    }
+  }
+
+  &--separator {
+    width: 114px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &--left_vector {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  &--icon_tool {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 40px;
+  }
+
+  &--right_vector {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+  }
 
   &--workers_types {
     position: absolute;
@@ -1757,21 +1986,203 @@
 
   &--worker {
     height: 100%;
-    width: 272px;
+    width: 307px;
 
     background-color: aquamarine;
+    position: relative;
+  }
+  &--worker_badge {
+    margin: 0;
+    position: absolute;
+  }
+
+  &--worker_photo {
+    margin-top: 35px;
+    margin-left: 35px;
+    height: 357px;
+  }
+
+  &--worker_profile {
+    position: absolute;
+    top:310px;
+    left: 55px;
+    background-color: $white-color;
+    width: 233px;
+    height: 137px;
+    padding-top: 20px;
+  }
+
+  &--worker_name {
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+
+    color: $black-color;
+  }
+
+  &--worker_title {
+    font-family: $FuturaBookC;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #959595;
+    padding-bottom: 20px;
+  }
+
+  &--worker_experience {
+    background: #E3B873;
+    width: 233px;
+    height: 44px;
+    font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  &--dmitry {
+    background-image: url("../assets/images/our-team/Dmitry.png");
   }
 }
+
+.our_team_container_text {
+  width: 100%;
+  margin-top: 44px;
+
+
+  &--paragraph {
+    max-width: 681px;
+    margin: 0 auto;
+    font-family: $FuturaBookC;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+
+    color: $white-color;
+    @media (max-width: 767.98px) {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: $white-color;
+      padding: 0 18px;
+    }
+  }
+}
+
+.about_emploee_vector_block {
+  height: 98px;
+  width: 100%;
+  background-color: $white-color;
+  padding-top: 63px;
+  &--img {
+    display: block;
+    margin:  0 auto;
+  }
+  @media (max-width: 767.98px) {
+    height: 51px;
+    padding-top: 28px;
+    background-color: $mobile-black-bg;
+  }
+}
+
 
 .about_emploee {
   height: 504px;
   padding-top: 281px;
   background-color: white;
+  &--text {
+    width: 763px;
+    margin: 0 auto 39px auto;
+    font-family: $FuturaBookC;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+
+    color: $black-background;
+    @media (max-width: 991.98px) {
+      width: 334px;
+      margin: 51px auto 39px auto;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      color: $white-color;
+    }
+  }
 }
 
 .our_clients_container {
+  margin-top:100px;
   height: 1071px;
   background-color: white;
+
+  &--title {
+    margin: 0;
+    padding-bottom: 13px;
+    font-family: $YesevaOne;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black-color;
+
+    @media (max-width: 991.98px) {
+      font-size: 22px;
+      line-height: 30px;
+      color: $white-color;
+      padding-bottom: 16px;
+    }
+  }
+
+  &--separator {
+    width: 114px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &--left_vector {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  &--icon_tool {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 40px;
+  }
+
+  &--right_vector {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+  }
+
+  &--text {
+    width: 763px;
+    margin: 50px auto 39px auto;
+    font-family: $FuturaBookC;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    color: $black-background;
+    @media (max-width: 991.98px) {
+      width: 334px;
+      margin: 51px auto 39px auto;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      color: $white-color;
+    }
+  }
 
   &--clients_types {
     width: 100%;
