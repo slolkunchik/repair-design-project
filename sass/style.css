@@ -2065,17 +2065,24 @@ a {
 .our_team_container {
   position: relative;
   padding-top: 95px;
-  min-height: 407px;
   background-color: #131313;
   color: white;
+}
+@media (max-width: 991.98px) {
+  .our_team_container {
+    background-color: #252525;
+  }
+}
+@media (max-width: 767.98px) {
+  .our_team_container {
+    padding-top: 0;
+  }
 }
 .our_team_container--title {
   width: 196px;
   margin: 0 auto;
   padding-bottom: 13px;
   font-family: "Yeseva One", "Georgia", serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   text-transform: uppercase;
   line-height: 28px;
@@ -2086,7 +2093,6 @@ a {
   .our_team_container--title {
     font-size: 22px;
     line-height: 30px;
-    padding-bottom: 17px;
   }
 }
 .our_team_container--separator {
@@ -2101,8 +2107,8 @@ a {
 }
 .our_team_container--icon_tool {
   position: absolute;
-  width: 28px;
-  height: 28px;
+  width: 29px;
+  height: 29px;
   left: 40px;
 }
 .our_team_container--right_vector {
@@ -2110,43 +2116,80 @@ a {
   top: 15px;
   right: 5px;
 }
-.our_team_container--workers_types {
+.our_team_container--background_box {
   position: absolute;
-  top: 222px;
+  top: 316px;
+  height: 218px;
   width: 100%;
-  height: 414px;
+  background-color: #131313;
+}
+@media (max-width: 991.98px) {
+  .our_team_container--background_box {
+    display: none;
+  }
+}
+.our_team_container--workers_types {
+  top: 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color: #FFFFFF;
+}
+@media (max-width: 991.98px) {
+  .our_team_container--workers_types {
+    background-color: #252525;
+  }
 }
 .our_team_container--worker {
+  position: relative;
   height: 100%;
   width: 307px;
-  background-color: aquamarine;
-  position: relative;
+  margin-right: 10px;
+  margin-bottom: 114px;
+}
+@media (max-width: 991.98px) {
+  .our_team_container--worker {
+    width: 339px;
+    margin-bottom: 110px;
+  }
 }
 .our_team_container--worker_badge {
   margin: 0;
   position: absolute;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
 }
 .our_team_container--worker_photo {
   margin-top: 35px;
   margin-left: 35px;
-  height: 357px;
+  height: 358px;
+  width: 272px;
+}
+@media (max-width: 991.98px) {
+  .our_team_container--worker_photo {
+    height: 358px;
+    width: 305px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .our_team_container--worker_profile {
   position: absolute;
-  top: 310px;
+  top: 312px;
   left: 55px;
-  background-color: #FFFFFF;
   width: 233px;
   height: 137px;
-  padding-top: 20px;
+  padding-top: 22px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 991.98px) {
+  .our_team_container--worker_profile {
+    left: 66px;
+  }
 }
 .our_team_container--worker_name {
   font-family: "Yeseva One", "Georgia", serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -2161,71 +2204,69 @@ a {
   padding-bottom: 20px;
 }
 .our_team_container--worker_experience {
-  background: #E3B873;
   width: 233px;
   height: 44px;
   font-family: "Yeseva One", "Georgia", serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 13px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 10px;
+  padding-top: 13px;
+  background: #E3B873;
 }
 .our_team_container--dmitry {
   background-image: url("../assets/images/our-team/Dmitry.png");
 }
+.our_team_container--larisa {
+  background-image: url("../assets/images/our-team/Larisa.png");
+}
+.our_team_container--alexey {
+  background-image: url("../assets/images/our-team/Alexey.png");
+}
 
 .our_team_container_text {
   width: 100%;
-  margin-top: 44px;
+  margin-top: 52px;
+  margin-bottom: 74px;
+}
+@media (max-width: 767.98px) {
+  .our_team_container_text {
+    margin-bottom: 41px;
+  }
 }
 .our_team_container_text--paragraph {
-  max-width: 681px;
+  max-width: 476px;
   margin: 0 auto;
   font-family: "FuturaBookC", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 34px;
+  line-height: 27px;
   text-align: center;
-  color: #FFFFFF;
 }
 @media (max-width: 767.98px) {
   .our_team_container_text--paragraph {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     text-align: center;
-    color: #FFFFFF;
     padding: 0 18px;
   }
 }
 
-.about_emploee_vector_block {
-  height: 98px;
-  width: 100%;
-  background-color: #FFFFFF;
-  padding-top: 63px;
+.about_emploee {
+  background-color: white;
 }
-.about_emploee_vector_block--img {
-  display: block;
-  margin: 0 auto;
-}
-@media (max-width: 767.98px) {
-  .about_emploee_vector_block {
-    height: 51px;
-    padding-top: 28px;
+@media (max-width: 991.98px) {
+  .about_emploee {
     background-color: #252525;
   }
 }
-
-.about_emploee {
-  height: 504px;
-  padding-top: 281px;
-  background-color: white;
+@media (max-width: 767.98px) {
+  .about_emploee {
+    display: none;
+  }
 }
 .about_emploee--text {
-  width: 763px;
-  margin: 0 auto 39px auto;
+  width: 558px;
+  margin: 0 auto;
   font-family: "FuturaBookC", "Arial", sans-serif;
   font-size: 20px;
   line-height: 34px;
@@ -2234,15 +2275,26 @@ a {
 }
 @media (max-width: 991.98px) {
   .about_emploee--text {
-    width: 334px;
-    margin: 51px auto 39px auto;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
     color: #FFFFFF;
   }
 }
+.about_emploee--vector_block {
+  height: 10px;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .about_emploee--vector_block {
+    height: 51px;
+    padding-top: 28px;
+    background-color: #252525;
+  }
+}
+.about_emploee--vector {
+  display: block;
+  margin: 0 auto;
+}
 
+/* the end of our_team_container block */
 .our_clients_container {
   margin-top: 100px;
   height: 1071px;
