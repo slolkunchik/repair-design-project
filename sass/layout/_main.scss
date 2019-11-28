@@ -151,6 +151,12 @@
     }
   }
 
+  &--button:hover {
+    background: $font-yellow-color;
+    border: 0;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  }
+
   &--button {
     margin-top: 41px;
     height: 51px;
@@ -166,6 +172,7 @@
     font-size: 13px;
     line-height: 15px;
     text-align: center;
+    text-transform: uppercase;
     color: $white-color;
 
     @media (max-width: 575.98px) {
@@ -177,19 +184,27 @@
     &-hover {
       margin-left: 4.5%;
       background: $font-yellow-color;
+      border: 0;
       box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    }
 
-      &:hover {
-        color: $dark-background-color;
-      }
+    &-hover:hover {
+      @include transparentButton;
     }
   }
 
-  &--button:hover {
-    background: $font-yellow-color;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  &--button-mobile {
+    display: none;
+    @media (max-width: 575.98px) {
+      display: block;
+    }
   }
 
+  &--button-desktop {
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
 }
 
 /* the end of the main images block */
@@ -361,6 +376,8 @@
     width: 85px;
     height: 85px;
     background-image: url("../assets/images/slider-button-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 194px;
     right: 25px;
@@ -373,6 +390,19 @@
     }
   }
 
+  &--arrow_right:hover {
+    top: 187px;
+    right: 18px;
+    width: 100px;
+    height: 100px;
+
+    @media (max-width: 991.98px) {
+      top: 112px;
+      right: 0px;
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
 .mobile_completed_project_container {
@@ -389,27 +419,37 @@
     margin: 0 auto 36px auto;
   }
   &--arrow_left {
+    top: 103px;
+    left: 31px;
     width: 36px;
     height: 36px;
     background-image: url("../assets/images/arrows/round-arrow-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
-    top: 103px;
-    left: 31px;
 
     &:hover {
-      background-color: $white-color;
+      top: 98px;
+      left: 27px;
+      width: 46px;
+      height: 46px;
     }
   }
   &--arrow_right {
+    top: 103px;
+    right: 31px;
     width: 36px;
     height: 36px;
     background-image: url("../assets/images/arrows/round-arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
-    top: 103px;
-    right: 31px;
 
     &:hover {
-      background-color: $white-color;
+      top: 98px;
+      right: 27px;
+      width: 46px;
+      height: 46px;
     }
   }
 
@@ -694,12 +734,37 @@
       width: 63px;
     }
   }
+
+  &--controls:hover {
+    top: calc(50% - 77.5px);
+    left: calc(50% - 77.5px);
+    height: 155px;
+    width: 155px;
+
+    @media (max-width: 991.98px) {
+      height: 70px;
+      width: 70px;
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
+    }
+  }
+
   &--controls_img {
     height: 145px;
     width: 145px;
+    cursor:pointer;
     @media (max-width: 991.98px) {
       height: 63px;
       width: 63px;
+    }
+  }
+
+  &--controls_img:hover {
+    height: 155px;
+    width: 155px;
+    @media (max-width: 991.98px) {
+      height: 70px;
+      width: 70px;
     }
   }
 }
@@ -846,6 +911,15 @@
       box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
       border: 0;
       border-radius: 0;
+    }
+  }
+  &--button:hover {
+    @include transparentButton;
+    color: $black-color;
+    border: 1px solid $font-yellow-color;
+    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+    @media (max-width: 767.98px) {
+      background-color: $white-color;
     }
   }
 }
@@ -1260,6 +1334,10 @@
     border: 1px solid $font-yellow-color;
     cursor: pointer;
   }
+
+  &--button:hover {
+    @include transparentButton;
+  }
 }
 
 .request_form_agreement {
@@ -1403,6 +1481,8 @@
     width: 36px;
     height: 36px;
     background-image: url("../assets/images/arrows/round-arrow-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
   }
 
@@ -1414,14 +1494,22 @@
     width: 36px;
     height: 36px;
     background-image: url("../assets/images/arrows/round-arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &--arrow_right:hover {
-    background-color: $white-color;
+    top: 98px;
+    right: 9px;
+    width: 46px;
+    height: 46px;
   }
 
   &--arrow_left:hover {
-    background-color: $white-color;
+    top: 98px;
+    left: 9px;
+    width: 46px;
+    height: 46px;
   }
 }
 
@@ -1503,16 +1591,16 @@
     cursor: pointer;
   }
 
-  &--inner_block_item:hover {
+  &--inner_block_item:hover,
+  &--inner_block_item-first {
     border-bottom: 1px solid $font-yellow-color;
     display: inline-block;
     color: $font-yellow-color;
   }
 
-  &--inner_block_item-first {
-    border-bottom: 1px solid $font-yellow-color;
-    display: inline-block;
-    color: $font-yellow-color;
+  &--inner_block_item-first:hover {
+    color: $white-color;
+    border-bottom: 0;
   }
 }
 
@@ -2000,10 +2088,10 @@
   &--workers_types {
     top: 0;
     width: 100%;
-
+    padding: 0 100px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: $white-color;
 
     @media (max-width: 991.98px) {
@@ -2230,7 +2318,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   &--client {
@@ -2288,7 +2376,8 @@
 
   &--scope_of_work {
     display: flex;
-    justify-content: space-evenly;
+    padding: 0 17px;
+    justify-content: space-between;
     align-items: center;
     background-color: $font-yellow-color;
   }
@@ -2524,6 +2613,11 @@
       box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
     }
   }
+
+  &--button:hover {
+    @include transparentButton;
+    border: 1px solid $font-yellow-color;
+  }
 }
 
 /* the end of bottom_form_container block */
@@ -2564,6 +2658,14 @@
     }
   }
 
+  &--tel {
+    color: $font-yellow-color;
+  }
+
+  &--tel:hover {
+    color: $white-color;
+  }
+
   &--icons {
     display: flex;
     justify-content: space-between;
@@ -2579,10 +2681,26 @@
     }
   }
 
+  &--icons:hover {
+    width: 81px;
+    @media (max-width: 575.98px) {
+      width: 109px;
+    }
+  }
+
   &--icon {
     @media (max-width: 575.98px) {
       width: 39px;
       height: 39px;
+    }
+  }
+
+  &--icon:hover {
+    width: 38px;
+    height: 38px;
+    @media (max-width: 575.98px) {
+      width: 49px;
+      height: 49px;
     }
   }
 
