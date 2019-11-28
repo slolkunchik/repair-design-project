@@ -11,13 +11,12 @@
 };
 
 @mixin navigationBar {
-  @include flex;
-
   height: 83px;
   padding: 0 100px 0 82px;
 
   background-color: $dark-background-color;
-  background-size: cover;
+  background-size: cover;@include flex;
+
   @media (max-width: 991.98px) {
     padding: 0 18px 0 18px;
   }
@@ -29,11 +28,12 @@
     height: 57px;
   }
   &--h1 {
-    font-family: $FuturaDemiC;
     font-size: 14px;
     line-height: 16px;
-    text-transform: uppercase;
+    font-family: $FuturaDemiC;
     color: $font-yellow-color;
+    text-transform: uppercase;
+
     cursor: pointer;
     @media (max-width: 375px) {
       font-size: 12px;
@@ -54,22 +54,20 @@
     @media (min-width: 992px) and (max-width: 1199.98px) {
       width: 58%;
     }
-    @media (max-width: 991.98px)  {
+    @media (max-width: 991.98px) {
       display: none;
     }
   }
   &--ul {
-    @include flex();
     width: 100%;
-    padding: 0 10px;
+    padding: 0 10px;@include flex();
   }
 
   &--link_item {
-    font-family: $FuturaBookC;
     font-size: 14px;
     line-height: 16px;
+    font-family: $FuturaBookC;
     color: $white-color;
-
     &:hover {
       color: $font-yellow-color;
     }
@@ -81,19 +79,19 @@
     &-selected:hover {
       color: $white-color;
     }
-
   }
 
   &--tel {
-    font-family: $FuturaDemiC;
     font-size: 14px;
     line-height: 16px;
+    font-family: $FuturaDemiC;
     text-align: right;
-    text-decoration-line: underline;
-
     color: $font-yellow-color;
+
+    text-decoration-line: underline;
     @media (max-width: 991.98px) {
       color: $white-color;
+
       text-decoration-line: none;
     }
 
@@ -108,27 +106,26 @@
 
     @media (max-width: 991.98px) {
       color: $font-yellow-color;
+
       text-decoration-line: underline;
     }
   }
 
   &--button {
-    background: $font-yellow-color;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    border-radius: 2px;
-    border: 0;
-
-    height: 37px;
     width: 161px;
+    height: 37px;
 
-    font-family: $FuturaDemiC;
     font-size: 13px;
     line-height: 15px;
+    font-family: $FuturaDemiC;
     text-align: center;
+    color: $white-color;
     text-transform: uppercase;
 
-    color: $white-color;
-
+    background: $font-yellow-color;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
     &:hover {
       color: $dark-background-color;
     }

@@ -1,2 +1,4 @@
 .editorconfig
 .idea/
+.htmlhintrc
+csscomb.json

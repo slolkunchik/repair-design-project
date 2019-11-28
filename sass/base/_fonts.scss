@@ -1,34 +1,39 @@
 @font-face {
+  font-style: normal;
+  font-weight: normal;
   font-family: "FuturaDemiC";
+
   src: url("../assets/fonts/FuturaDemiC.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
+  font-style: normal;
+  font-weight: normal;
   font-family: "FuturaBookC";
+
   src: url("../assets/fonts/FuturaBookC.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
+  font-style: normal;
+  font-weight: normal;
   font-family: "Yeseva One";
+
   src: url("../assets/fonts/YesevaOne.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
+  font-style: normal;
+  font-weight: normal;
   font-family: "FuturaMediumC";
+
   src: url("../assets/fonts/Futuramediumc.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: "Proxima Nova";
-  src: url("../assets/fonts/ProximaNova-Regular.otf") format("opentype");
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  font-family: "Proxima Nova";
+
+  src: url("../assets/fonts/ProximaNova-Regular.otf") format("opentype");
 }

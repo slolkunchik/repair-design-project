@@ -3,17 +3,18 @@
 
   display: flex;
   height: 707px;
-  @media (max-width: 767.98px)  {
+  @media (max-width: 767.98px) {
     height: 476px;
   }
 
   &--aside_instagram_wrapper {
-    @include flex();
     width: 82px;
     height: 100%;
     padding-bottom: 83px;
 
     background-color: $dark-background-color;
+
+    @include flex();
 
     @media (max-width: 991.98px) {
       display: none;
@@ -23,16 +24,17 @@
   &--scroll_down_block {
     position: absolute;
     top: 658px;
-    left: 0px;
+    left: 0;
 
-    @include flex();
     justify-content: center;
     width: 247px;
     height: 97px;
 
     background-color: $dark-background-color;
 
-    @media (max-width:991.98px)  {
+    @include flex();
+
+    @media (max-width:991.98px) {
       display: none;
     }
   }
@@ -40,14 +42,13 @@
   &--scroll_down_text {
     padding-right: 12px;
 
-    font-family: $YesevaOne;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
-    text-transform: uppercase;
-
+    font-family: $YesevaOne;
     color: $white-color;
+    text-transform: uppercase;
 
     &:hover {
       color: $font-yellow-color;
@@ -55,25 +56,22 @@
   }
 
   &--scroll_down_button:hover {
-    height: 35px;
     width: 35px;
+    height: 35px;
   }
-
 }
 
 .aside_instagram_text {
   width: 13px;
   margin: 0 auto;
 
-  &--paragraph{
-
-    font-family: $FuturaDemiC;
+  &--paragraph {
     font-size: 14px;
     line-height: 16px;
+    font-family: $FuturaDemiC;
     text-align: center;
-    text-transform: uppercase;
-
     color: $font-yellow-color;
+    text-transform: uppercase;
 
     transform: rotate(90deg);
   }
@@ -88,33 +86,34 @@
 .main_img {
   width: calc(100% - 80px);
   height: 100%;
+
   background-image: url("../assets/images/main-img.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   @media (max-width: 991.98px) {
     width: 100%;
   }
 
   &--title {
-    padding-left: 4.5%;
-    padding-top: 14.3%;
     margin: 0;
+    padding-top: 14.3%;
+    padding-left: 4.5%;
 
-    font-family: $YesevaOne;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 53px;
+    font-family: $YesevaOne;
+    color: $white-color;
     text-transform: uppercase;
 
-    color: $white-color;
-
     @media (max-width: 575.98px) {
+      padding-top: 22.7%;
+
       font-size: 27px;
       line-height: 132.83%;
-      padding-top: 22.7%;
     }
 
     @media (max-width: 375px) {
@@ -128,19 +127,20 @@
   }
 
   &--text {
-    padding-left: 4.5%;
-    margin-top: 19px;
     width: 473px;
+    margin-top: 19px;
+    padding-left: 4.5%;
 
-    font-family: $FuturaBookC;
     font-size: 22px;
     line-height: 30px;
+    font-family: $FuturaBookC;
     color: $white-color;
 
     @media (max-width: 575.98px) {
+      width: 80%;
       margin-top: 16px;
       margin-bottom: 6px;
-      width: 80%;
+
       font-size: 18px;
       line-height: 135.84%;
     }
@@ -154,26 +154,26 @@
   &--button:hover {
     background: $font-yellow-color;
     border: 0;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
   }
 
   &--button {
-    margin-top: 41px;
-    height: 51px;
+    box-sizing: border-box;
     width: 207px;
+    height: 51px;
+    margin-top: 41px;
     margin-right: 15px;
 
-    border: 1px solid $white-color;
-    box-sizing: border-box;
-    border-radius: 2px;
-    background-color: Transparent;
-
-    font-family: $FuturaDemiC;
     font-size: 13px;
     line-height: 15px;
+    font-family: $FuturaDemiC;
     text-align: center;
-    text-transform: uppercase;
     color: $white-color;
+    text-transform: uppercase;
+
+    background-color: Transparent;
+    border: 1px solid $white-color;
+    border-radius: 2px;
 
     @media (max-width: 575.98px) {
       display: block;
@@ -183,9 +183,10 @@
 
     &-hover {
       margin-left: 4.5%;
+
       background: $font-yellow-color;
       border: 0;
-      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
     }
 
     &-hover:hover {
@@ -210,8 +211,9 @@
 /* the end of the main images block */
 
 .separator_links_container {
-  background-color: $dark-background-color;
   height: 176px;
+
+  background-color: $dark-background-color;
 
   @media (min-width: 991.98px) and (max-width: 1199.98px) {
     height: 100px;
@@ -222,31 +224,28 @@
   }
 
   &--links_block {
-    @include flex();
     width: 623px;
     height: 24px;
-
     margin-left: 41.5%;
     padding-top: 106px;
+
+    @include flex();
 
     @media (min-width: 992px) and (max-width: 1199.98px) {
       margin-left: 300px;
       padding-top: 5%;
-
     }
   }
 
 
   &--link {
-    font-family: $YesevaOne;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
-    text-transform: uppercase;
-
+    font-family: $YesevaOne;
     color: rgba(255, 255, 255, 0.3);
-
+    text-transform: uppercase;
   }
 
   &--link:hover {
@@ -269,8 +268,9 @@
 
 .completed_project_container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+
   background-color: $dark-background-color;
 
   @media (max-width: 767.98px) {
@@ -294,16 +294,17 @@
     }
 
     @media (max-width: 767.98px) {
-      margin-left: 0;
       width: 100%;
+      margin-left: 0;
     }
   }
 
   &--slider_block {
+    position: relative;
+
     width: 58.5%;
     height: 482px;
     overflow: hidden;
-    position: relative;
 
     @media (max-width: 1199.98px) {
       width: 63%;
@@ -323,8 +324,10 @@
   &--img_separator {
     position: absolute;
     z-index: 1;
+
     width: 700px;
     height: 482px;
+
     background-color: $dark-background-color;
     @media (max-width: 1199.98px) {
       display: none;
@@ -333,6 +336,7 @@
 
   &--images_block {
     position: relative;
+
     width: 2000px;
 
     @media (max-width: 1199.98px) {
@@ -342,11 +346,13 @@
     &-first {
       position: absolute;
       z-index: 2;
+
       margin-right: 20px;
 
       @media (max-width: 1199.98px) {
         top: 50px;
         right: 0;
+
         width: 545px;
         height: 386px;
         margin-right: 10px;
@@ -355,6 +361,7 @@
       @media (max-width: 991.98px) {
         top: 50px;
         right: 0;
+
         width: 324px;
         height: 230px;
         margin-right: 10px;
@@ -362,10 +369,11 @@
     }
 
     &-second {
-      display: block;
       position: absolute;
-      z-index: 0;
       left: 563px;
+      z-index: 0;
+
+      display: block;
       @media (max-width: 1199.98px) {
         display: none;
       }
@@ -373,32 +381,36 @@
   }
 
   &--arrow_right {
-    width: 85px;
-    height: 85px;
-    background-image: url("../assets/images/slider-button-right.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     top: 194px;
     right: 25px;
     z-index: 10;
+
+    width: 85px;
+    height: 85px;
+
+    background-image: url("../assets/images/slider-button-right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
 
     @media (max-width: 991.98px) {
       top: 119px;
-      right: 0px;
+      right: 0;
     }
   }
 
   &--arrow_right:hover {
     top: 187px;
     right: 18px;
+
     width: 100px;
     height: 100px;
 
     @media (max-width: 991.98px) {
       top: 112px;
-      right: 0px;
+      right: 0;
+
       width: 100px;
       height: 100px;
     }
@@ -414,40 +426,47 @@
 
   &--images_block {
     position: relative;
+
     max-width: 375px;
     max-height: 264px;
     margin: 0 auto 36px auto;
   }
   &--arrow_left {
+    position: absolute;
     top: 103px;
     left: 31px;
+
     width: 36px;
     height: 36px;
+
     background-image: url("../assets/images/arrows/round-arrow-left.png");
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
 
     &:hover {
       top: 98px;
       left: 27px;
+
       width: 46px;
       height: 46px;
     }
   }
   &--arrow_right {
+    position: absolute;
     top: 103px;
     right: 31px;
+
     width: 36px;
     height: 36px;
+
     background-image: url("../assets/images/arrows/round-arrow-right.png");
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
 
     &:hover {
       top: 98px;
       right: 27px;
+
       width: 46px;
       height: 46px;
     }
@@ -474,14 +493,17 @@
   }
 
   &--link {
+    display: inline-block;
     width: 10px;
     height: 10px;
     margin-right: 18px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: inline-block;
+
     vertical-align: middle;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
     cursor: pointer;
+
     pointer-events: auto;
   }
 
@@ -491,10 +513,13 @@
 
   &--prev_arrow {
     display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    pointer-events: auto;
     margin-right: 30px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
   }
 
   &--prev_arrow_img:hover {
@@ -505,12 +530,15 @@
     background-color: rgba(255, 255, 255, 0.3);
   }
 
-  &--next_arrow{
+  &--next_arrow {
     display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    pointer-events: auto;
     margin-left: 12px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
   }
 
   &--link-hover {
@@ -524,24 +552,25 @@
     margin-top: 0;
     margin-bottom: 30px;
 
-    font-family: $YesevaOne;
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
     line-height: 37px;
-    letter-spacing: -0.07em;
-    text-transform: uppercase;
+    font-family: $YesevaOne;
     color: $font-yellow-color;
+    text-transform: uppercase;
+    letter-spacing: -0.07em;
 
 
     @media (max-width: 767.98px) {
-      margin: 10px auto 10px auto;
-      width: 150px;
       display: block;
+      width: 150px;
+      margin: 10px auto 10px auto;
     }
 
     @media (max-width: 575.98px) {
       margin: 21px auto 22px auto;
+
       font-size: 22px;
       line-height: 30px;
       text-align: center;
@@ -549,31 +578,33 @@
     }
   }
 
-  &--title_vector{
+  &--title_vector {
     margin: 9px 2px;
 
     @media (max-width: 767.98px) {
-        display: none;
-     }
+      display: none;
+    }
   }
 
   &--text {
     padding-right: 75px;
-    font-family: $FuturaBookC;
+
     font-size: 18px;
     line-height: 29px;
+    font-family: $FuturaBookC;
     color: $white-color;
 
     @media (max-width: 767.98px) {
-        width: 350px;
-        display: block;
-        margin: 0 auto 30px auto;
-        padding-right: 0;
+      display: block;
+      width: 350px;
+      margin: 0 auto 30px auto;
+      padding-right: 0;
     }
 
     @media (max-width: 575.98px) {
-      padding: 0 32px;
       margin: 0 auto 36px auto;
+      padding: 0 32px;
+
       font-size: 14px;
       line-height: 22px;
       text-align: center;
@@ -583,14 +614,15 @@
 
 .completed_project_grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   width: 364px;
   height: 156px;
   margin-top: 50px;
 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
   @media (max-width: 767.98px) {
-      margin: 10px auto;
+    margin: 10px auto;
   }
 
   @media (max-width: 575.98px) {
@@ -601,13 +633,13 @@
 
 
   &--subtitle {
-    font-family: $YesevaOne;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
-    text-transform: uppercase;
+    font-family: $YesevaOne;
     color: $font-yellow-color;
+    text-transform: uppercase;
 
     @media (max-width: 575.98px) {
       font-size: 14px;
@@ -616,10 +648,9 @@
   }
 
   &--text {
-    font-family: $FuturaBookC;
     font-size: 15px;
     line-height: 20px;
-
+    font-family: $FuturaBookC;
     color: $white-color;
 
     @media (max-width: 575.98px) {
@@ -633,7 +664,6 @@
       display: grid;
       align-content: end;
     }
-
   }
 }
 
@@ -641,9 +671,11 @@
 
 .video_container {
   position: relative;
+
   background-color: $dark-background-color;
   @media (max-width: 767.98px) {
     padding-bottom: 61px;
+
     background-color: $mobile-black-bg;
   }
 }
@@ -652,27 +684,30 @@
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 18px;
-  font-family: $YesevaOne;
+
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  text-transform: uppercase;
   line-height: 28px;
-  color: $white-color;
+  font-family: $YesevaOne;
   text-align: center;
+  color: $white-color;
+  text-transform: uppercase;
 
   @media (max-width: 991.98px) {
     width: 224px;
-    font-size: 22px;
-    line-height: 30px;
     padding-top: 38px;
     padding-bottom: 20px;
+
+    font-size: 22px;
+    line-height: 30px;
   }
 }
 
 .video_container_separator {
+  position: relative;
+
   width: 114px;
-  position:relative;
   margin: 0 auto;
 
   &--left_vector {
@@ -681,90 +716,99 @@
     left: 0;
   }
 
-  &--camera{
+  &--camera {
     position: absolute;
+    left: 40px;
+
     width: 33px;
     height: 28px;
-    left: 40px;
   }
   &--right_vector {
     position: absolute;
     top: 15px;
     right: 5px;
   }
-
 }
 
 .video_container_video {
   position: relative;
+
   width: 100%;
   &--frame {
     position: relative;
-    border: 0;
     z-index: 2;
+
     display: block;
     width: 817px;
     margin: 60px auto 0 auto;
 
+    border: 0;
+
     @media (max-width: 991.98px) {
-      height: 275px;
       width: 517px;
+      height: 275px;
       margin: 88px auto 0 auto;
     }
 
     @media (max-width: 575.98px) {
-      height: 207px;
       width: 340px;
+      height: 207px;
       margin: 68px auto 0 auto;
     }
   }
   &--controls {
     position: absolute;
-    z-index: 2;
-    height: 145px;
-    width: 145px;
     top: calc(50% - 72.5px);
     left: calc(50% - 72.5px);
+    z-index: 2;
+
+    width: 145px;
+    height: 145px;
+
     cursor: pointer;
 
     @media (max-width: 991.98px) {
       top: calc(50% - 31.5px);
       left: calc(50% - 31.5px);
-      height: 63px;
+
       width: 63px;
+      height: 63px;
     }
   }
 
   &--controls:hover {
     top: calc(50% - 77.5px);
     left: calc(50% - 77.5px);
-    height: 155px;
+
     width: 155px;
+    height: 155px;
 
     @media (max-width: 991.98px) {
-      height: 70px;
-      width: 70px;
       top: calc(50% - 35px);
       left: calc(50% - 35px);
+
+      width: 70px;
+      height: 70px;
     }
   }
 
   &--controls_img {
-    height: 145px;
     width: 145px;
-    cursor:pointer;
+    height: 145px;
+
+    cursor: pointer;
     @media (max-width: 991.98px) {
-      height: 63px;
       width: 63px;
+      height: 63px;
     }
   }
 
   &--controls_img:hover {
-    height: 155px;
     width: 155px;
+    height: 155px;
     @media (max-width: 991.98px) {
-      height: 70px;
       width: 70px;
+      height: 70px;
     }
   }
 }
@@ -772,10 +816,12 @@
 
 .video_container_background_box {
   position: absolute;
-  z-index: 0;
   top: 421px;
-  height: 209px;
+  z-index: 0;
+
   width: 100%;
+  height: 209px;
+
   background-color: $white-color;
   @media (max-width: 991.98px) {
     display: none;
@@ -783,17 +829,19 @@
 }
 
 .video_container_vector_block {
-  height: 98px;
   width: 100%;
-  background-color: $white-color;
+  height: 98px;
   padding-top: 63px;
+
+  background-color: $white-color;
   &--img {
     display: block;
-    margin:  0 auto;
+    margin: 0 auto;
   }
   @media (max-width: 767.98px) {
     height: 51px;
     padding-top: 28px;
+
     background-color: $mobile-black-bg;
   }
 }
@@ -801,26 +849,29 @@
 .video_container_text {
   width: 100%;
   margin-bottom: 92px;
+
   background-color: $white-color;
   @media (max-width: 767.98px) {
-    background-color: $mobile-black-bg;
     margin: 0;
+
+    background-color: $mobile-black-bg;
   }
   &--paragraph {
     max-width: 681px;
     margin: 0 auto;
-    font-family: $FuturaBookC;
+
     font-size: 20px;
     line-height: 34px;
+    font-family: $FuturaBookC;
     text-align: center;
-
     color: $black-background;
     @media (max-width: 767.98px) {
+      padding: 0 18px;
+
       font-size: 14px;
       line-height: 24px;
       text-align: center;
       color: $white-color;
-      padding: 0 18px;
     }
   }
 }
@@ -831,7 +882,9 @@
   height: 250px;
   @media (max-width: 767.98px) {
     position: relative;
+
     height: 285px;
+
     background-color: $mobile-black-bg;
   }
 }
@@ -860,24 +913,29 @@
   }
   &--label {
     width: 231px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 20px;
+    font-family: $FuturaBookC;
     color: rgba(54, 54, 54, 0.5);
     @media (max-width: 767.98px) {
       width: 340px;
+
       color: rgba(255, 255, 255, 0.5);
     }
   }
   &--text {
     width: 231px;
-    font-family: $FuturaBookC;
+
     font-size: 18px;
     line-height: 24px;
+    font-family: $FuturaBookC;
+
     border: 0;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     @media (max-width: 767.98px) {
       width: 340px;
+
       background-color: $mobile-black-bg;
       border-bottom: 1px solid $white-color;
     }
@@ -891,33 +949,39 @@
   }
 
   &--button {
-    height: 51px;
     width: 200px;
-    background: $font-yellow-color;
-    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
-    border-radius: 2px;
-    font-family: $FuturaDemiC;
+    height: 51px;
+
     font-size: 15px;
     line-height: 26px;
+    font-family: $FuturaDemiC;
     text-align: center;
-    text-transform: uppercase;
     color: $white-color;
+    text-transform: uppercase;
+
+    background: $font-yellow-color;
     border: 1px solid $white-color;
+    border-radius: 2px;
+    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
     cursor: pointer;
     @media (max-width: 767.98px) {
       position: absolute;
       top: 260px;
+
       width: 340px;
-      box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+
       border: 0;
       border-radius: 0;
+      box-shadow: 0 10px 20px rgba(227, 184, 115, 0.1);
     }
   }
   &--button:hover {
-    @include transparentButton;
     color: $black-color;
+
     border: 1px solid $font-yellow-color;
-    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+    box-shadow: 0 10px 20px rgba(227, 184, 115, 0.1);
+
+    @include transparentButton;
     @media (max-width: 767.98px) {
       background-color: $white-color;
     }
@@ -938,35 +1002,40 @@
 }
 
 .agreement_controls {
-  display: block;
   position: relative;
-  padding-left: 35px;
+
+  display: block;
   margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: $FuturaDemiC;
+  padding-left: 35px;
+
   font-size: 18px;
+  font-family: $FuturaDemiC;
   color: $black-color;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   &--box {
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
+
     width: 0;
+    height: 0;
+
+    cursor: pointer;
+    opacity: 0;
   }
   &--text {
-    font-family: $FuturaBookC;
     font-size: 16px;
     line-height: 20px;
-
+    font-family: $FuturaBookC;
     color: $black-color;
     @media (max-width: 767.98px) {
-      color: $white-color;
       line-height: 22px;
+      color: $white-color;
     }
   }
 
@@ -974,24 +1043,28 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 18px;
+
     width: 18px;
+    height: 18px;
+
+    background-color: #e3b873;
     cursor: pointer;
-    background-color: #E3B873;
   }
 
   &--checkmark:after {
+    content: "";
     position: absolute;
-    left: 6px;
     top: 3px;
+    left: 6px;
+
     width: 4px;
     height: 6px;
+
     border: solid white;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    content: "";
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 }
 
@@ -1006,24 +1079,27 @@
     width: 196px;
     margin: 0 auto;
     padding-bottom: 13px;
-    font-family: $YesevaOne;
+
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    text-transform: uppercase;
     line-height: 28px;
-    color: $black-color;
+    font-family: $YesevaOne;
     text-align: center;
+    color: $black-color;
+    text-transform: uppercase;
     @media (max-width: 767.98px) {
+      padding-bottom: 17px;
+
       font-size: 22px;
       line-height: 30px;
-      padding-bottom: 17px;
     }
   }
 }
 .types_of_repair_separator {
-  width: 114px;
   position: relative;
+
+  width: 114px;
   margin: 0 auto;
 
   &--left_vector {
@@ -1034,9 +1110,10 @@
 
   &--tools {
     position: absolute;
+    left: 40px;
+
     width: 28px;
     height: 28px;
-    left: 40px;
   }
   &--right_vector {
     position: absolute;
@@ -1048,24 +1125,26 @@
 .types_of_repair_columns {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 44px;
   @media (max-width: 767.98px) {
-    margin-top: 68px;
-    height: 1570px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 1570px;
+    margin-top: 68px;
     padding-bottom: 119px;
   }
   &--type {
     position: relative;
+
     width: 392px;
     height: 608px;
     margin: 15px 15px 0 15px;
     @media (max-width: 767.98px) {
       position: relative;
+
       width: 340px;
       height: 365px;
       margin: 0 auto;
@@ -1085,30 +1164,33 @@
   }
   &--textbox {
     position: absolute;
-    top:295px;
+    top: 295px;
     left: 31px;
+
     width: 330px;
     height: 286px;
     padding: 25px 31px;
+
     background-color: $white-color;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     @media (max-width: 767.98px) {
+      top: 223px;
       left: 0;
-      top:223px;
+
       width: 270px;
       height: 241px;
       padding: 21px 31px;
     }
   }
   &--textbox_title {
-    font-family: $YesevaOne;
+    margin-top: 0;
+    margin-bottom: 0;
+
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
-    margin-top:0;
-    margin-bottom:0;
-
+    font-family: $YesevaOne;
     color: $black-background;
     @media (max-width: 767.98px) {
       font-size: 15px;
@@ -1117,10 +1199,10 @@
   }
   &--textbox_list {
     padding-left: 20px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 25px;
-
+    font-family: $FuturaBookC;
     color: #959595;
     @media (max-width: 767.98px) {
       font-size: 13px;
@@ -1130,31 +1212,34 @@
   }
   &--prices {
     position: absolute;
+    top: 554px;
+    left: 31px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 31px;
-    top: 554px;
-    height: 54px;
     width: 228px;
-    font-family: $YesevaOne;
+    height: 54px;
+
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
-    text-transform: uppercase;
-
+    font-family: $YesevaOne;
     color: $white-color;
+    text-transform: uppercase;
 
     background: $font-yellow-color;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
     @media (max-width: 767.98px) {
-      height: 40px;
+      top: 444px;
+      left: 0;
+
       width: 190px;
+      height: 40px;
+
       font-size: 15px;
       line-height: 21px;
-      left: 0;
-      top: 444px;
     }
   }
 }
@@ -1162,48 +1247,52 @@
 /* the end of types_of_repair_container block */
 
 .request_container {
-
-  height: 979px;
   display: flex;
   justify-content: space-between;
+  height: 979px;
   padding-top: 124px;
 
   &--steps_box {
-    height: 645px;
-    min-width: 773px;
     width: 54%;
+    min-width: 773px;
+    height: 645px;
+
     background-image: url("../assets/images/houses.png");
     background-repeat: no-repeat;
   }
 
   &--form_box {
-    height: 100%;
     width: 505px;
-    padding-top: 106px;
+    height: 100%;
     margin-right: 7%;
+    padding-top: 106px;
   }
 
   &--description_box {
-      width: 636px;
-      height: 636px;
-      border-style: solid;
-      border-color: $font-yellow-color;
-      border-width: 3px;
-      border-left-color: transparent;
-      border-radius: 50%;
-      position:relative;
-      top:60px;
-      left:-160px;
+    position: relative;
+    top: 60px;
+    left: -160px;
+
+    width: 636px;
+    height: 636px;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: $font-yellow-color;
+    border-left-color: transparent;
+    border-radius: 50%;
   }
   @media (max-width: 1199.98px) {
     display: none;
   }
 }
 .request_container_outer {
+  position: absolute;
+
   width: 70px;
   height: 70px;
+
   background-color: $white-color;
-  position: absolute;
   border-radius: 50%;
   &--first {
     top: 35px;
@@ -1224,12 +1313,13 @@
 }
 
 .request_container_text {
-  width: 364px;
   position: absolute;
-  font-family: $FuturaMediumC;
+
+  width: 364px;
+
   font-size: 18px;
   line-height: 21px;
-
+  font-family: $FuturaMediumC;
   color: $black-background;
 
   &--first {
@@ -1253,87 +1343,98 @@
 .request_container_inner {
   width: 45px;
   height: 45px;
-  background-color: $font-yellow-color;
-  border-radius: 50%;
   margin: 12px;
-  font-family: $YesevaOne;
+  padding: 10px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
+  font-family: $YesevaOne;
   text-align: center;
-  padding: 10px;
   color: $white-color;
+
+  background-color: $font-yellow-color;
+  border-radius: 50%;
 }
 
 .request_title {
-  background-color: $dark-background-color;
   height: 114px;
-  padding-top: 28px;
   margin: 0;
-  font-family: $FuturaDemiC;
-  font-size: 20px;
-  line-height: 25px;
+  padding-top: 28px;
+
   font-style: normal;
   font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: $FuturaDemiC;
   text-align: center;
   color: $white-color;
+
+  background-color: $dark-background-color;
 }
 .request_form {
-  background-color: $dark-background-color;
   height: 380px;
   padding: 0 49px 0 49px;
+
+  background-color: $dark-background-color;
 }
-.request_fields{
+.request_fields {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 244px;
   width: 408px;
+  height: 244px;
   margin: 0 auto;
 }
 .request_help {
   height: 72px;
   padding: 0 33px;
+
   background-color: $white-color;
 }
 
 .request_form_field {
   &--label {
     width: 408px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 20px;
+    font-family: $FuturaBookC;
     color: rgba(255, 255, 255, 0.5);
   }
   &--text {
-    width: 408px;;
-    font-family: $FuturaMediumC;
+    width: 408px;
+
     font-size: 18px;
     line-height: 25px;
-    background-color: $request-background;
+    font-family: $FuturaMediumC;
     color: $white-color;
+
+    background-color: $request-background;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
   }
   &--text::placeholder {
     color: $white-color;
   }
 
   &--button {
-    height: 51px;
-    width: 213px;
     float: right;
+    width: 213px;
+    height: 51px;
     margin-top: 10px;
-    background: $font-yellow-color;
-    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
-    font-family: $FuturaDemiC;
+
     font-size: 13px;
     line-height: 18px;
+    font-family: $FuturaDemiC;
     text-align: center;
-    text-transform: uppercase;
     color: $white-color;
+    text-transform: uppercase;
+
+    background: $font-yellow-color;
     border: 1px solid $font-yellow-color;
+    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
     cursor: pointer;
   }
 
@@ -1349,31 +1450,36 @@
 }
 
 .request_agreement_controls {
-  display: block;
   position: relative;
-  padding-left: 35px;
+
+  display: block;
   margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: $FuturaDemiC;
+  padding-left: 35px;
+
   font-size: 18px;
+  font-family: $FuturaDemiC;
   color: $white-color;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   &--box {
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
+
     width: 0;
+    height: 0;
+
+    cursor: pointer;
+    opacity: 0;
   }
   &--text {
-    font-family: $FuturaBookC;
     font-size: 16px;
     line-height: 22px;
-
+    font-family: $FuturaBookC;
     color: $white-color;
   }
 
@@ -1381,58 +1487,65 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 18px;
+
     width: 18px;
-    cursor: pointer;
+    height: 18px;
+
     background-color: $font-yellow-color;
+    cursor: pointer;
   }
 
   &--checkmark:after {
+    content: "";
     position: absolute;
-    left: 6px;
     top: 3px;
+    left: 6px;
+
     width: 4px;
     height: 6px;
+
     border: solid white;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    content: "";
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 }
 
 .request_help_inner {
-  display:flex;
-  margin-top:30px;
+  display: flex;
   width: 341px;
+  margin-top: 30px;
 
   &--logo {
     width: 113px;
   }
   &--text {
-    font-family: $FuturaDemiC;
+    width: 344px;
+    margin-top: 20px;
+
     font-size: 20px;
     line-height: 25px;
-    margin-top:20px;
+    font-family: $FuturaDemiC;
     color: $font-yellow-color;
-    width: 344px;
   }
 }
 
 /* the end of request_container block */
 
 .styles_examples_container {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
-  background: url("../assets/images/styles-background.png");
-  background-size: cover;
+  height: 864px;
   margin-top: 114px;
   margin-bottom: 41px;
-  padding-left: 99px;
   padding-right: 59px;
-  height: 864px;
-  position: relative;
+  padding-left: 99px;
+
+  background: url("../assets/images/styles-background.png");
+  background-size: cover;
   @media (max-width: 991.98px) {
     margin-bottom: 0;
   }
@@ -1449,18 +1562,19 @@
     padding: 0 auto;
   }
   &--title {
-    font-family: $YesevaOne;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
     font-style: normal;
     font-weight: normal;
-    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $YesevaOne;
+    text-align: center;
     color: $font-yellow-color;
+    text-transform: uppercase;
   }
 
   &--img_container {
     position: relative;
+
     width: 340px;
     height: 121px;
     margin: 24px auto 0 auto;
@@ -1469,21 +1583,25 @@
   &--img {
     @media (max-width: 575.98px) {
       position: absolute;
-      z-index: 1;
       top: 0;
+      z-index: 1;
+
       width: 340px;
       height: 242px;
+
       background-image: url("../assets/images/mobile-styles-background.jpg");
     }
   }
 
   &--arrow_left {
     position: absolute;
-    z-index: 2;
     top: 103px;
     left: 14px;
+    z-index: 2;
+
     width: 36px;
     height: 36px;
+
     background-image: url("../assets/images/arrows/round-arrow-left.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1492,11 +1610,13 @@
 
   &--arrow_right {
     position: absolute;
-    z-index: 2;
     top: 103px;
     right: 14px;
+    z-index: 2;
+
     width: 36px;
     height: 36px;
+
     background-image: url("../assets/images/arrows/round-arrow-right.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1505,6 +1625,7 @@
   &--arrow_right:hover {
     top: 98px;
     right: 9px;
+
     width: 46px;
     height: 46px;
   }
@@ -1512,6 +1633,7 @@
   &--arrow_left:hover {
     top: 98px;
     left: 9px;
+
     width: 46px;
     height: 46px;
   }
@@ -1519,12 +1641,13 @@
 
 .styles_examples_container_inner {
   position: absolute;
-  width: 794px;
   top: -114px;
-  height: 1068px;
+
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 794px;
+  height: 1068px;
 }
 
 .styles_examples_images {
@@ -1565,45 +1688,52 @@
   }
 
   &--title {
-    font-family: $YesevaOne;
+    padding-bottom: 47px;
+
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
     line-height: 37px;
-    text-transform: uppercase;
+    font-family: $YesevaOne;
     color: $font-yellow-color;
-    padding-bottom: 47px;
+    text-transform: uppercase;
   }
 
-  &--inner_block{
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    height: 516px;
+  &--inner_block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 516px;
+    margin: 0;
+    padding-left: 0;
+
+    list-style-type: none;
   }
 
   &--inner_block_item {
     display: inline-block;
-    font-family: $ProximaNova;
+    height: 34px;
+
     font-size: 20px;
     line-height: 34px;
+    font-family: $ProximaNova;
     color: $white-color;
-    height: 34px;
+
     cursor: pointer;
   }
 
   &--inner_block_item:hover,
   &--inner_block_item-first {
-    border-bottom: 1px solid $font-yellow-color;
     display: inline-block;
+
     color: $font-yellow-color;
+
+    border-bottom: 1px solid $font-yellow-color;
   }
 
   &--inner_block_item-first:hover {
     color: $white-color;
+
     border-bottom: 0;
   }
 }
@@ -1612,11 +1742,13 @@
 
 .design_project_container {
   position: relative;
-  padding-top: 112px;
+
   min-height: 620px;
+  padding-top: 112px;
   @media (max-width: 991.98px) {
-    background-color:  #252525;
     padding-top: 50px;
+
+    background-color: #252525;
   }
   @media (max-width: 575.98px) {
     padding-top: 173px;
@@ -1631,26 +1763,29 @@
   &--title {
     margin: 0;
     padding-bottom: 13px;
-    font-family: $YesevaOne;
-    font-size: 20px;
-    line-height: 28px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: $YesevaOne;
     text-align: center;
-    text-transform: uppercase;
     color: $black-color;
+    text-transform: uppercase;
 
     @media (max-width: 991.98px) {
+      padding-bottom: 16px;
+
       font-size: 22px;
       line-height: 30px;
       color: $white-color;
-      padding-bottom: 16px;
     }
   }
 
   &--separator {
-    width: 114px;
     position: relative;
+
+    width: 114px;
     margin: 0 auto;
   }
 
@@ -1662,9 +1797,10 @@
 
   &--icon_tool {
     position: absolute;
+    left: 40px;
+
     width: 28px;
     height: 28px;
-    left: 40px;
   }
 
   &--right_vector {
@@ -1676,15 +1812,16 @@
   &--text {
     width: 763px;
     margin: 52px auto 39px auto;
-    font-family: $FuturaBookC;
+
     font-size: 20px;
     line-height: 27px;
+    font-family: $FuturaBookC;
     text-align: center;
-
     color: $black-background;
     @media (max-width: 991.98px) {
       width: 334px;
       margin: 51px auto 39px auto;
+
       font-size: 15px;
       line-height: 20px;
       text-align: center;
@@ -1694,15 +1831,18 @@
 
   &--columns_types {
     position: relative;
-    width: 100%;
-    height: 100%;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+
     background-color: $request-background;
     @media (max-width: 991.98px) {
       height: 100%;
+
       background-color: $mobile-black-bg;
     }
   }
@@ -1710,8 +1850,10 @@
   &--background {
     position: absolute;
     top: 0;
-    height: 280px;
+
     width: 100%;
+    height: 280px;
+
     background-color: $white-color;
     @media (max-width: 991.98px) {
       display: none;
@@ -1720,8 +1862,9 @@
 
   &--type {
     position: relative;
-    height: 100%;
+
     width: 392px;
+    height: 100%;
     height: 688px;
     margin: 0 15px 15px 15px;
 
@@ -1756,13 +1899,14 @@
   }
 
   &--textbox_title {
-    font-family: $YesevaOne;
-    font-size: 18px;
-    line-height: 25px;
-    font-style: normal;
-    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $YesevaOne;
     color: $black-background;
     @media (max-width: 991.98px) {
       font-size: 15px;
@@ -1774,26 +1918,31 @@
     position: absolute;
     top: 295px;
     left: 31px;
+
     width: 330px;
     padding: 25px 31px 57px 31px;
+
     background-color: $white-color;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     @media (max-width: 991.98px) {
       top: 223px;
       left: 0;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+
       width: 270px;
       padding: 18px 31px 37px 31px;
+
+      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
     }
   }
 
   &--textbox_list {
+    margin: 0;
     padding-left: 20px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 25px;
+    font-family: $FuturaBookC;
     color: #959595;
-    margin: 0;
     @media (max-width: 991.98px) {
       font-size: 13px;
       line-height: 22px;
@@ -1802,28 +1951,33 @@
 
   &--prices {
     position: absolute;
-    display: flex;
-    padding-left: 33px;
-    align-items: center;
-    left: 0;
     bottom: -27px;
-    height: 54px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
     width: 228px;
-    font-family: $YesevaOne;
+    height: 54px;
+    padding-left: 33px;
+
     font-size: 18px;
     line-height: 25px;
-    text-transform: uppercase;
+    font-family: $YesevaOne;
     color: $white-color;
+    text-transform: uppercase;
+
     background: $font-yellow-color;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
     @media (max-width: 991.98px) {
       bottom: -20px;
-      height: 40px;
+
+      justify-content: center;
       width: 190px;
+      height: 40px;
+      padding-left: 0;
+
       font-size: 15px;
       line-height: 21px;
-      padding-left: 0;
-      justify-content: center;
     }
   }
 }
@@ -1833,8 +1987,9 @@
 .goal_steps_container {
   display: flex;
   justify-content: space-between;
-  padding: 0 7%;
   height: 100%;
+  padding: 0 7%;
+
   background-color: $dark-background-color;
   @media (max-width: 991.98px) {
     background-color: $mobile-black-bg;
@@ -1846,27 +2001,28 @@
 
   &--article {
     min-width: 337px;
+
     color: $white-color;
   }
 
   &--upper_text {
-    font-family: $FuturaDemiC;
     font-size: 15px;
     line-height: 21px;
+    font-family: $FuturaDemiC;
     text-transform: uppercase;
   }
 
   &--title {
     display: inline-block;
     margin: 18px 58px 92px 0;
-    font-family: $YesevaOne;
+
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
     line-height: 37px;
-    text-transform: uppercase;
-
+    font-family: $YesevaOne;
     color: $font-yellow-color;
+    text-transform: uppercase;
   }
 
   &--title_vector {
@@ -1875,20 +2031,21 @@
 
   &--steps_block {
     display: flex;
-    margin-top: 87px;
     flex-direction: column;
     justify-content: space-between;
     width: 61.8%;
+    margin-top: 87px;
   }
 
   &--steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 28%;
-    grid-row-gap: 36px;
     width: 100%;
     height: 178px;
+
+    grid-column-gap: 28%;
+    grid-row-gap: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     @media (max-width: 1199.98px) {
       grid-column-gap: 10%;
     }
@@ -1898,8 +2055,8 @@
   }
 
   &--step_item {
-    opacity: 0.3;
     cursor: pointer;
+    opacity: 0.3;
 
     &-selected {
       opacity: 1;
@@ -1917,29 +2074,31 @@
   &--step_number {
     display: inline-block;
     margin-bottom: 15px;
-    border-bottom: 1px solid $font-yellow-color;
-    font-family: $YesevaOne;
+
     font-size: 15px;
     line-height: 21px;
-    text-transform: uppercase;
+    font-family: $YesevaOne;
     color: $white-color;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid $font-yellow-color;
   }
 
   &--step_text {
-    font-family: $FuturaBookC;
     font-size: 15px;
     line-height: 18px;
-
+    font-family: $FuturaBookC;
     color: $white-color;
   }
 
   &--img {
-    height: 376px;
     max-width: 765px;
+    height: 376px;
     margin-top: 45px;
+
     background-image: url("../assets/images/goal-steps.jpg");
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     @media (max-width: 1199.98px) {
       height: 314px;
     }
@@ -1950,42 +2109,44 @@
 }
 
 .goal_steps_description {
-
   &--pages {
-    font-family: $YesevaOne;
     font-size: 18px;
     line-height: 25px;
+    font-family: $YesevaOne;
     text-transform: uppercase;
   }
 
   &--subtitle {
-    margin: 22px 0 16px 0;
     width: 262px;
-    font-family: $YesevaOne;
+    margin: 22px 0 16px 0;
+
     font-size: 15px;
     line-height: 23px;
-    text-transform: uppercase;
-
+    font-family: $YesevaOne;
     color: $font-yellow-color;
+    text-transform: uppercase;
   }
 
   &--text {
     width: 337px;
     height: 222px;
     margin-bottom: 61px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 25px;
-
+    font-family: $FuturaBookC;
     color: $white-color;
   }
 
   &--prev_arrow {
     display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    pointer-events: auto;
     margin-right: 30px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
   }
 
   &--prev_arrow_img:hover {
@@ -1996,23 +2157,29 @@
     background-color: rgba(255, 255, 255, 0.3);
   }
 
-  &--next_arrow{
+  &--next_arrow {
     display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-    pointer-events: auto;
     margin-left: 12px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
   }
 
   &--circle {
+    display: inline-block;
     width: 10px;
     height: 10px;
     margin-right: 18px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: inline-block;
+
     vertical-align: middle;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
     cursor: pointer;
+
     pointer-events: auto;
   }
 
@@ -2029,9 +2196,12 @@
 
 .our_team_container {
   position: relative;
+
   padding-top: 95px;
-  background-color: $dark-background-color;
+
   color: white;
+
+  background-color: $dark-background-color;
 
   @media (max-width: 991.98px) {
     background-color: $mobile-black-bg;
@@ -2045,14 +2215,15 @@
     width: 196px;
     margin: 0 auto;
     padding-bottom: 13px;
-    font-family: $YesevaOne;
-    font-size: 20px;
-    text-transform: uppercase;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 20px;
     line-height: 28px;
-    color: $white-color;
+    font-family: $YesevaOne;
     text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
 
     @media (max-width: 767.98px) {
       font-size: 22px;
@@ -2061,8 +2232,9 @@
   }
 
   &--separator {
-    width: 114px;
     position: relative;
+
+    width: 114px;
     margin: 0 auto;
   }
 
@@ -2074,9 +2246,10 @@
 
   &--icon_tool {
     position: absolute;
+    left: 40px;
+
     width: 29px;
     height: 29px;
-    left: 40px;
   }
 
   &--right_vector {
@@ -2088,8 +2261,10 @@
   &--background_box {
     position: absolute;
     top: 316px;
-    height: 218px;
+
     width: 100%;
+    height: 218px;
+
     background-color: $dark-background-color;
 
     @media (max-width: 991.98px) {
@@ -2099,11 +2274,13 @@
 
   &--workers_types {
     top: 0;
-    width: 100%;
-    padding: 0 100px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
+    padding: 0 100px;
+
     background-color: $white-color;
 
     @media (max-width: 991.98px) {
@@ -2113,8 +2290,9 @@
 
   &--worker {
     position: relative;
-    height: 100%;
+
     width: 307px;
+    height: 100%;
     margin-right: 10px;
     margin-bottom: 114px;
 
@@ -2124,20 +2302,23 @@
     }
   }
   &--worker_badge {
-    margin: 0;
     position: absolute;
-    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+
+    margin: 0;
+
+    box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5);
   }
 
   &--worker_photo {
+    width: 272px;
+    height: 358px;
     margin-top: 35px;
     margin-left: 35px;
-    height: 358px;
-    width: 272px;
 
     @media (max-width: 991.98px) {
-      height: 358px;
       width: 305px;
+      height: 358px;
+
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -2147,11 +2328,13 @@
     position: absolute;
     top: 312px;
     left: 55px;
+
     width: 233px;
     height: 137px;
     padding-top: 22px;
+
     background-color: $white-color;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
 
     @media (max-width: 991.98px) {
       left: 66px;
@@ -2160,35 +2343,37 @@
 
   &--worker_name {
     margin: 0;
-    font-family: $YesevaOne;
-    font-size: 18px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 18px;
     line-height: 25px;
+    font-family: $YesevaOne;
     text-align: center;
-
     color: $black-color;
   }
 
   &--worker_title {
-    font-family: $FuturaBookC;
+    padding-bottom: 20px;
+
     font-size: 18px;
     line-height: 26px;
+    font-family: $FuturaBookC;
     text-align: center;
-
     color: #959595;
-    padding-bottom: 20px;
   }
 
   &--worker_experience {
     width: 233px;
     height: 44px;
-    font-family: $YesevaOne;
+    padding-top: 13px;
+
     font-size: 13px;
     line-height: 20px;
+    font-family: $YesevaOne;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 13px;
+
     background: $font-yellow-color;
   }
 
@@ -2216,16 +2401,18 @@
   &--paragraph {
     max-width: 476px;
     margin: 0 auto;
-    font-family: $FuturaBookC;
+
     font-size: 20px;
     line-height: 27px;
+    font-family: $FuturaBookC;
     text-align: center;
 
     @media (max-width: 767.98px) {
+      padding: 0 18px;
+
       font-size: 15px;
       line-height: 20px;
       text-align: center;
-      padding: 0 18px;
     }
   }
 }
@@ -2238,17 +2425,17 @@
   }
 
   @media (max-width: 767.98px) {
-   display: none;
+    display: none;
   }
 
   &--text {
     width: 558px;
     margin: 0 auto;
-    font-family: $FuturaBookC;
+
     font-size: 20px;
     line-height: 34px;
+    font-family: $FuturaBookC;
     text-align: center;
-
     color: $black-background;
 
     @media (max-width: 991.98px) {
@@ -2257,19 +2444,20 @@
   }
 
   &--vector_block {
-    height: 10px;
     width: 100%;
+    height: 10px;
 
     @media (max-width: 767.98px) {
       height: 51px;
       padding-top: 28px;
+
       background-color: $mobile-black-bg;
     }
   }
 
   &--vector {
     display: block;
-    margin:  0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -2277,6 +2465,7 @@
 
 .our_clients_container {
   margin-top: 90px;
+
   background-color: white;
   @media (max-width: 575.98px) {
     display: none;
@@ -2285,18 +2474,20 @@
   &--title {
     margin: 0;
     padding-bottom: 13px;
-    font-family: $YesevaOne;
-    font-size: 20px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 20px;
     line-height: 28px;
+    font-family: $YesevaOne;
     text-align: center;
-    text-transform: uppercase;
     color: $black-color;
+    text-transform: uppercase;
   }
 
   &--separator {
     position: relative;
+
     width: 114px;
     margin: 0 auto;
   }
@@ -2309,9 +2500,10 @@
 
   &--icon_tool {
     position: absolute;
+    left: 40px;
+
     width: 34px;
     height: 28px;
-    left: 40px;
   }
 
   &--right_vector {
@@ -2323,28 +2515,30 @@
   &--text {
     width: 476px;
     margin: 52px auto 39px auto;
-    font-family: $FuturaBookC;
+
     font-size: 20px;
     line-height: 27px;
+    font-family: $FuturaBookC;
     text-align: center;
-
     color: $black-background;
   }
 
   &--clients_types {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
   }
 
   &--client {
     position: relative;
+
     width: 376px;
     height: 428px;
-    padding: 24px 32px 0 20px;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
     margin-bottom: 120px;
+    padding: 24px 32px 0 20px;
+
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
   }
 
   &--client_title {
@@ -2354,20 +2548,21 @@
   }
 
   &--client_name {
+    margin: 0;
     padding-left: 23px;
-    font-family: $YesevaOne;
-    font-size: 18px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 18px;
     line-height: 23px;
+    font-family: $YesevaOne;
     color: $black-color;
-    margin: 0;
   }
 
   &--review_text {
-    font-family: $FuturaBookC;
     font-size: 15px;
     line-height: 27px;
+    font-family: $FuturaBookC;
     color: #959595;
     text-transform: lowercase;
   }
@@ -2384,40 +2579,44 @@
     position: absolute;
     top: 400px;
     left: 0;
+
     display: grid;
+    width: 295px;
+    height: 54px;
+
+    background-color: $white-color;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+
     grid-gap: 1px;
     grid-template-columns: 135px 159px;
-    height: 54px;
-    width: 295px;
-    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    background-color: $white-color;
   }
 
   &--scope_of_work {
     display: flex;
-    padding: 0 17px;
     justify-content: space-between;
     align-items: center;
+    padding: 0 17px;
+
     background-color: $font-yellow-color;
   }
 
   &--size {
-    font-family: $YesevaOne;
     font-size: 17px;
     line-height: 24px;
-
+    font-family: $YesevaOne;
     color: $white-color;
   }
-
 }
 
 /* the end of our_clients_container block */
 
 .bottom_form_background {
   position: relative;
+
   max-width: 883px;
   height: 260px;
   margin: 0 auto;
+
   background-color: $white-color;
 
   @media (max-width: 575.98px) {
@@ -2427,11 +2626,13 @@
 
 .bottom_form_container {
   position: absolute;
-  z-index: 5;
   top: 38px;
   left: 0;
+  z-index: 5;
+
   width: 100%;
   padding: 34px;
+
   background-color: $black-color;
 
   @media (max-width: 991.98px) {
@@ -2439,21 +2640,22 @@
   }
   @media (max-width: 575.98px) {
     top: 0;
+
     padding: 22px 18px 0 18px;
   }
 
   &--title {
     margin-top: 0;
     margin-bottom: 44px;
-    font-family: $YesevaOne;
-    font-size: 20px;
-    line-height: 28px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: $YesevaOne;
     text-align: center;
-    text-transform: uppercase;
-
     color: $white-color;
+    text-transform: uppercase;
 
     @media (max-width: 575.98px) {
       margin-bottom: 52px;
@@ -2471,14 +2673,15 @@
 
   &--fields_box {
     display: grid;
+
     grid-column-gap: 60px;
     grid-row-gap: 49px;
     grid-template-columns: 231px 231px;
 
     @media (max-width: 575.98px) {
+      grid-row-gap: 63px;
       grid-template-columns: 340px;
       grid-template-rows: 45px 45px 45px;
-      grid-row-gap: 63px;
     }
   }
 
@@ -2492,24 +2695,25 @@
   }
 
   &--field-last {
-    grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 2;
+    grid-column-start: 1;
     grid-row-end: 3;
+    grid-row-start: 2;
 
     @media (max-width: 575.98px) {
-      grid-column-start: 1;
       grid-column-end: 2;
-      grid-row-start: 3;
+      grid-column-start: 1;
       grid-row-end: 4;
+      grid-row-start: 3;
     }
   }
 
   &--label {
     width: 231px;
-    font-family: $FuturaBookC;
+
     font-size: 15px;
     line-height: 20px;
+    font-family: $FuturaBookC;
     color: rgba(255, 255, 255, 0.5);
 
     @media (max-width: 575.98px) {
@@ -2519,11 +2723,13 @@
 
   &--text {
     width: 231px;
-    font-family: $FuturaBookC;
+
     font-size: 18px;
     line-height: 24px;
-    background-color: $black-color;
+    font-family: $FuturaBookC;
     color: $white-color;
+
+    background-color: $black-color;
     border: 0;
     border-bottom: 1px solid $white-color;
 
@@ -2539,7 +2745,8 @@
     color: $white-color;
   }
 
-  &--text-last, &--label-last {
+  &--text-last,
+  &--label-last {
     width: 517px;
 
     @media (max-width: 575.98px) {
@@ -2557,33 +2764,38 @@
   }
 
   &--controls {
-    display: block;
     position: relative;
-    padding-left: 26px;
+
+    display: block;
     margin-bottom: 12px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-family: $FuturaDemiC;
+    padding-left: 26px;
+
     font-size: 18px;
+    font-family: $FuturaDemiC;
     color: $black-color;
+
+    cursor: pointer;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   &--controls_box {
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
+
     width: 0;
+    height: 0;
+
+    cursor: pointer;
+    opacity: 0;
   }
 
   &--controls_text {
-    font-family: $FuturaBookC;
     font-size: 16px;
     line-height: 22px;
-
+    font-family: $FuturaBookC;
     color: $white-color;
   }
 
@@ -2591,39 +2803,45 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 18px;
+
     width: 18px;
-    cursor: pointer;
+    height: 18px;
+
     background-color: $font-yellow-color;
+    cursor: pointer;
   }
 
   &--controls_checkmark:after {
+    content: "";
     position: absolute;
-    left: 6px;
     top: 3px;
+    left: 6px;
+
     width: 4px;
     height: 6px;
+
     border: solid white;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    content: "";
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 
   &--button {
-    height: 51px;
     width: 200px;
+    height: 51px;
     margin: 0 auto;
-    background: $font-yellow-color;
-    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
-    font-family: $FuturaDemiC;
+
     font-size: 15px;
     line-height: 26px;
+    font-family: $FuturaDemiC;
     text-align: center;
-    text-transform: uppercase;
     color: $white-color;
+    text-transform: uppercase;
+
+    background: $font-yellow-color;
     border: 1px solid $black-color;
+    box-shadow: 0 5px 20px rgba(227, 184, 115, 0.1);
     cursor: pointer;
 
     @media (max-width: 991.98px) {
@@ -2631,13 +2849,15 @@
     }
     @media (max-width: 575.98px) {
       width: 340px;
-      box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+
+      box-shadow: 0 10px 20px rgba(227, 184, 115, 0.1);
     }
   }
 
   &--button:hover {
-    @include transparentButton;
     border: 1px solid $font-yellow-color;
+
+    @include transparentButton;
   }
 }
 
@@ -2646,11 +2866,11 @@
 .map_container {
   display: flex;
   flex-direction: column;
-  //height: 954px;
-  background-image: url("../assets/images/map-background.png");
+
   background-color: $black-color;
-  background-size: cover;
+  background-image: url("../assets/images/map-background.png");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: 991.98px) {
     background: $mobile-black-bg;
@@ -2658,24 +2878,25 @@
 
   &--text {
     width: 589px;
+    margin: 0 auto;
     padding-top: 271px;
     padding-bottom: 26px;
-    margin: 0 auto;
-    font-family: $YesevaOne;
-    font-size: 20px;
+
     font-style: normal;
     font-weight: normal;
+    font-size: 20px;
     line-height: 28px;
+    font-family: $YesevaOne;
     text-align: center;
-    text-transform: uppercase;
-
     color: $font-yellow-color;
+    text-transform: uppercase;
 
     @media (max-width: 575.98px) {
       order: 2;
       width: 340px;
       padding-top: 42px;
       padding-bottom: 20px;
+
       font-size: 18px;
       line-height: 25px;
     }
@@ -2730,15 +2951,15 @@
   &--map {
     max-width: 955px;
     height: auto;
-    padding: 0 15px;
     margin: 43px auto 65px auto;
+    padding: 0 15px;
 
     @media (max-width: 575.98px) {
+      order: 1;
       max-width: 370px;
-      padding: 0 15px;
       height: 255px;
       margin: 45px auto 0 auto;
-      order: 1;
+      padding: 0 15px;
     }
   }
 
