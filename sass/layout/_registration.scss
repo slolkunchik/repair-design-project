@@ -1,0 +1,189 @@
+.registration {
+  height: 250px;
+  @media (max-width: 767.98px) {
+    position: relative;
+
+    height: 285px;
+
+    background-color: $mobile-black-bg;
+  }
+}
+
+.registration_form {
+  width: 769px;
+  margin: 0 auto;
+  @media (max-width: 767.98px) {
+    width: 340px;
+  }
+}
+
+.registration_fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: 767.98px) {
+    width: 340px;
+  }
+}
+
+.registration_form_field {
+  width: 200px;
+  @media (max-width: 767.98px) {
+    width: 340px;
+  }
+  &--label {
+    width: 231px;
+
+    font-size: 15px;
+    line-height: 20px;
+    font-family: $FuturaBookC;
+    color: rgba(54, 54, 54, 0.5);
+    @media (max-width: 767.98px) {
+      width: 340px;
+
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &--text {
+    width: 231px;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $FuturaBookC;
+
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    @media (max-width: 767.98px) {
+      width: 340px;
+
+      background-color: $mobile-black-bg;
+      border-bottom: 1px solid $white-color;
+    }
+  }
+
+  &--text::placeholder {
+    color: $black-background;
+    @media (max-width: 767.98px) {
+      color: $white-color;
+    }
+  }
+
+  &--button {
+    width: 200px;
+    height: 51px;
+
+    font-size: 15px;
+    line-height: 26px;
+    font-family: $FuturaDemiC;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+
+    background: $font-yellow-color;
+    border: 1px solid $white-color;
+    border-radius: 2px;
+    box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
+    cursor: pointer;
+    @media (max-width: 767.98px) {
+      position: absolute;
+      top: 260px;
+
+      width: 340px;
+
+      border: 0;
+      border-radius: 0;
+      box-shadow: 0 10px 20px rgba(227, 184, 115, 0.1);
+    }
+  }
+  &--button:hover {
+    color: $black-color;
+
+    border: 1px solid $font-yellow-color;
+    box-shadow: 0 10px 20px rgba(227, 184, 115, 0.1);
+
+    @include transparentButton;
+    @media (max-width: 767.98px) {
+      background-color: $white-color;
+    }
+  }
+}
+.registration_form_field:first-child {
+  @media (max-width: 767.98px) {
+    margin-bottom: 63px;
+  }
+}
+
+.registration_form_agreement {
+  width: 286px;
+  margin: 33px auto 0 auto;
+  @media (max-width: 767.98px) {
+    margin: 27px 0;
+  }
+}
+
+.agreement_controls {
+  position: relative;
+
+  display: block;
+  margin-bottom: 12px;
+  padding-left: 35px;
+
+  font-size: 18px;
+  font-family: $FuturaDemiC;
+  color: $black-color;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &--box {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    cursor: pointer;
+    opacity: 0;
+  }
+  &--text {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $FuturaBookC;
+    color: $black-color;
+    @media (max-width: 767.98px) {
+      line-height: 22px;
+      color: $white-color;
+    }
+  }
+
+  &--checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #e3b873;
+    cursor: pointer;
+  }
+
+  &--checkmark:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+
+    width: 4px;
+    height: 6px;
+
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

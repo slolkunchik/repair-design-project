@@ -1,0 +1,144 @@
+.our_clients_container {
+  margin-top: 90px;
+
+  background-color: white;
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+
+  &--title {
+    margin: 0;
+    padding-bottom: 13px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: $YesevaOne;
+    text-align: center;
+    color: $black-color;
+    text-transform: uppercase;
+  }
+
+  &--separator {
+    position: relative;
+
+    width: 114px;
+    margin: 0 auto;
+  }
+
+  &--left_vector {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  &--icon_tool {
+    position: absolute;
+    left: 40px;
+
+    width: 34px;
+    height: 28px;
+  }
+
+  &--right_vector {
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+
+  &--text {
+    width: 476px;
+    margin: 52px auto 39px auto;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: $FuturaBookC;
+    text-align: center;
+    color: $black-background;
+  }
+
+  &--clients_types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &--client {
+    position: relative;
+
+    width: 376px;
+    height: 428px;
+    margin-bottom: 120px;
+    padding: 24px 32px 0 20px;
+
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
+  }
+
+  &--client_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  &--client_name {
+    margin: 0;
+    padding-left: 23px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: $YesevaOne;
+    color: $black-color;
+  }
+
+  &--review_text {
+    font-size: 15px;
+    line-height: 27px;
+    font-family: $FuturaBookC;
+    color: #959595;
+    text-transform: lowercase;
+  }
+
+  &--review_sentence {
+    display: inline-block;
+  }
+
+  &--review_sentence::first-letter {
+    text-transform: capitalize;
+  }
+
+  &--scope_of_work_box {
+    position: absolute;
+    top: 400px;
+    left: 0;
+
+    display: grid;
+    width: 295px;
+    height: 54px;
+
+    background-color: $white-color;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+
+    grid-gap: 1px;
+    grid-template-columns: 135px 159px;
+  }
+
+  &--scope_of_work {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px;
+
+    background-color: $font-yellow-color;
+  }
+
+  &--size {
+    font-size: 17px;
+    line-height: 24px;
+    font-family: $YesevaOne;
+    color: $white-color;
+  }
+}

@@ -1,0 +1,241 @@
+.design_project_container {
+  position: relative;
+
+  min-height: 620px;
+  padding-top: 112px;
+  @media (max-width: 991.98px) {
+    padding-top: 50px;
+
+    background-color: #252525;
+  }
+  @media (max-width: 575.98px) {
+    padding-top: 173px;
+  }
+
+  &--li-mobile_none {
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+
+  &--title {
+    margin: 0;
+    padding-bottom: 13px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: $YesevaOne;
+    text-align: center;
+    color: $black-color;
+    text-transform: uppercase;
+
+    @media (max-width: 991.98px) {
+      padding-bottom: 16px;
+
+      font-size: 22px;
+      line-height: 30px;
+      color: $white-color;
+    }
+  }
+
+  &--separator {
+    position: relative;
+
+    width: 114px;
+    margin: 0 auto;
+  }
+
+  &--left_vector {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+
+  &--icon_tool {
+    position: absolute;
+    left: 40px;
+
+    width: 28px;
+    height: 28px;
+  }
+
+  &--right_vector {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+  }
+
+  &--text {
+    width: 763px;
+    margin: 52px auto 39px auto;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: $FuturaBookC;
+    text-align: center;
+    color: $black-background;
+    @media (max-width: 991.98px) {
+      width: 334px;
+      margin: 51px auto 39px auto;
+
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      color: $white-color;
+    }
+  }
+
+  &--columns_types {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    background-color: $request-background;
+    @media (max-width: 991.98px) {
+      height: 100%;
+
+      background-color: $mobile-black-bg;
+    }
+  }
+
+  &--background {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 280px;
+
+    background-color: $white-color;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+
+  &--type {
+    position: relative;
+
+    width: 392px;
+    height: 100%;
+    height: 688px;
+    margin: 0 15px 15px 15px;
+
+    @media (max-width: 991.98px) {
+      width: 340px;
+      height: 365px;
+    }
+
+    &-type1 {
+      background-image: url("../assets/images/types/type1.png");
+      background-repeat: no-repeat;
+      @media (max-width: 991.98px) {
+        margin-bottom: 115px;
+      }
+    }
+
+    &-type2 {
+      background-image: url("../assets/images/types/type3.png");
+      background-repeat: no-repeat;
+      @media (max-width: 991.98px) {
+        margin-bottom: 178px;
+      }
+    }
+
+    &-type3 {
+      background-image: url("../assets/images/types/type2.png");
+      background-repeat: no-repeat;
+      @media (max-width: 991.98px) {
+        margin-bottom: 195px;
+      }
+    }
+  }
+
+  &--textbox_title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $YesevaOne;
+    color: $black-background;
+    @media (max-width: 991.98px) {
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+
+  &--textbox {
+    position: absolute;
+    top: 295px;
+    left: 31px;
+
+    width: 330px;
+    padding: 25px 31px 57px 31px;
+
+    background-color: $white-color;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    @media (max-width: 991.98px) {
+      top: 223px;
+      left: 0;
+
+      width: 270px;
+      padding: 18px 31px 37px 31px;
+
+      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &--textbox_list {
+    margin: 0;
+    padding-left: 20px;
+
+    font-size: 15px;
+    line-height: 25px;
+    font-family: $FuturaBookC;
+    color: #959595;
+    @media (max-width: 991.98px) {
+      font-size: 13px;
+      line-height: 22px;
+    }
+  }
+
+  &--prices {
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    width: 228px;
+    height: 54px;
+    padding-left: 33px;
+
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $YesevaOne;
+    color: $white-color;
+    text-transform: uppercase;
+
+    background: $font-yellow-color;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+    @media (max-width: 991.98px) {
+      bottom: -20px;
+
+      justify-content: center;
+      width: 190px;
+      height: 40px;
+      padding-left: 0;
+
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+}

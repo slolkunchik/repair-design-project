@@ -1,0 +1,207 @@
+.goal_steps_container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 7%;
+
+  background-color: $dark-background-color;
+  @media (max-width: 991.98px) {
+    background-color: $mobile-black-bg;
+  }
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+
+
+  &--article {
+    min-width: 337px;
+
+    color: $white-color;
+  }
+
+  &--upper_text {
+    font-size: 15px;
+    line-height: 21px;
+    font-family: $FuturaDemiC;
+    text-transform: uppercase;
+  }
+
+  &--title {
+    display: inline-block;
+    margin: 18px 58px 92px 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    font-family: $YesevaOne;
+    color: $font-yellow-color;
+    text-transform: uppercase;
+  }
+
+  &--title_vector {
+    margin-bottom: 12px;
+  }
+
+  &--steps_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 61.8%;
+    margin-top: 87px;
+  }
+
+  &--steps {
+    display: grid;
+    width: 100%;
+    height: 178px;
+
+    grid-column-gap: 28%;
+    grid-row-gap: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    @media (max-width: 1199.98px) {
+      grid-column-gap: 10%;
+    }
+    @media (max-width: 991.98px) {
+      grid-column-gap: 2%;
+    }
+  }
+
+  &--step_item {
+    cursor: pointer;
+    opacity: 0.3;
+
+    &-selected {
+      opacity: 1;
+    }
+  }
+
+  &--step_item:hover {
+    opacity: 1;
+  }
+
+  &--inner_item {
+    width: 125px;
+  }
+
+  &--step_number {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-size: 15px;
+    line-height: 21px;
+    font-family: $YesevaOne;
+    color: $white-color;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid $font-yellow-color;
+  }
+
+  &--step_text {
+    font-size: 15px;
+    line-height: 18px;
+    font-family: $FuturaBookC;
+    color: $white-color;
+  }
+
+  &--img {
+    max-width: 765px;
+    height: 376px;
+    margin-top: 45px;
+
+    background-image: url("../assets/images/goal-steps.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 1199.98px) {
+      height: 314px;
+    }
+    @media (max-width: 991.98px) {
+      height: 255px;
+    }
+  }
+}
+
+.goal_steps_description {
+  &--pages {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $YesevaOne;
+    text-transform: uppercase;
+  }
+
+  &--subtitle {
+    width: 262px;
+    margin: 22px 0 16px 0;
+
+    font-size: 15px;
+    line-height: 23px;
+    font-family: $YesevaOne;
+    color: $font-yellow-color;
+    text-transform: uppercase;
+  }
+
+  &--text {
+    width: 337px;
+    height: 222px;
+    margin-bottom: 61px;
+
+    font-size: 15px;
+    line-height: 25px;
+    font-family: $FuturaBookC;
+    color: $white-color;
+  }
+
+  &--prev_arrow {
+    display: inline-block;
+    margin-right: 30px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+  }
+
+  &--prev_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--next_arrow_img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--next_arrow {
+    display: inline-block;
+    margin-left: 12px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+  }
+
+  &--circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 18px;
+
+    vertical-align: middle;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    cursor: pointer;
+
+    pointer-events: auto;
+  }
+
+  &--circle:hover {
+    background-color: $white-color;
+  }
+
+  &--circle-hover {
+    background-color: $white-color;
+  }
+}

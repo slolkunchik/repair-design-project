@@ -1,0 +1,209 @@
+.main_img_container {
+  position: relative;
+
+  display: flex;
+  height: 707px;
+  @media (max-width: 767.98px) {
+    height: 476px;
+  }
+
+  &--aside_instagram_wrapper {
+    width: 82px;
+    height: 100%;
+    padding-bottom: 83px;
+
+    background-color: $dark-background-color;
+
+    @include flex();
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+
+  &--scroll_down_block {
+    position: absolute;
+    top: 658px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 247px;
+    height: 97px;
+
+    background-color: $dark-background-color;
+
+    @media (max-width:991.98px) {
+      display: none;
+    }
+  }
+
+  &--scroll_down_text {
+    padding-right: 12px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: $YesevaOne;
+    color: $white-color;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $font-yellow-color;
+    }
+  }
+
+  &--scroll_down_button:hover {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.aside_instagram_text {
+  width: 13px;
+  margin: 0 auto;
+
+  &--paragraph {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $FuturaDemiC;
+    text-align: center;
+    color: $font-yellow-color;
+    text-transform: uppercase;
+
+    transform: rotate(90deg);
+  }
+  &--aside_vector {
+    display: block;
+    margin: 77px auto 0 auto;
+  }
+  &--link:hover {
+    color: $white-color;
+  }
+}
+.main_img {
+  width: calc(100% - 80px);
+  height: 100%;
+
+  background-image: url("../assets/images/main-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 991.98px) {
+    width: 100%;
+  }
+
+  &--title {
+    margin: 0;
+    padding-top: 14.3%;
+    padding-left: 4.5%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    font-family: $YesevaOne;
+    color: $white-color;
+    text-transform: uppercase;
+
+    @media (max-width: 575.98px) {
+      padding-top: 22.7%;
+
+      font-size: 27px;
+      line-height: 132.83%;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    &-yellow {
+      color: $font-yellow-color;
+    }
+  }
+
+  &--text {
+    width: 473px;
+    margin-top: 19px;
+    padding-left: 4.5%;
+
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $FuturaBookC;
+    color: $white-color;
+
+    @media (max-width: 575.98px) {
+      width: 80%;
+      margin-top: 16px;
+      margin-bottom: 6px;
+
+      font-size: 18px;
+      line-height: 135.84%;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &--button:hover {
+    background: $font-yellow-color;
+    border: 0;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+  }
+
+  &--button {
+    box-sizing: border-box;
+    width: 207px;
+    height: 51px;
+    margin-top: 41px;
+    margin-right: 15px;
+
+    font-size: 13px;
+    line-height: 15px;
+    font-family: $FuturaDemiC;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+
+    background-color: Transparent;
+    border: 1px solid $white-color;
+    border-radius: 2px;
+
+    @media (max-width: 575.98px) {
+      display: block;
+      width: 91%;
+      margin: 26px auto;
+    }
+
+    &-hover {
+      margin-left: 4.5%;
+
+      background: $font-yellow-color;
+      border: 0;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+    }
+
+    &-hover:hover {
+      @include transparentButton;
+    }
+  }
+
+  &--button-mobile {
+    display: none;
+    @media (max-width: 575.98px) {
+      display: block;
+    }
+  }
+
+  &--button-desktop {
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
+}
