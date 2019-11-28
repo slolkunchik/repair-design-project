@@ -1467,6 +1467,8 @@ a {
   font-family: "FuturaDemiC", "Arial", sans-serif;
   font-size: 20px;
   line-height: 25px;
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
   color: #FFFFFF;
 }
@@ -1646,6 +1648,8 @@ a {
   font-size: 22px;
   line-height: 30px;
   text-align: center;
+  font-style: normal;
+  font-weight: normal;
   text-transform: uppercase;
   color: #E3B873;
 }
@@ -1815,6 +1819,8 @@ a {
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 20px;
   line-height: 28px;
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   color: #181818;
@@ -1939,6 +1945,8 @@ a {
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 18px;
   line-height: 25px;
+  font-style: normal;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
   color: #363636;
@@ -2042,6 +2050,8 @@ a {
   display: inline-block;
   margin: 18px 58px 92px 0;
   font-family: "Yeseva One", "Georgia", serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 27px;
   line-height: 37px;
   text-transform: uppercase;
@@ -2210,6 +2220,8 @@ a {
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 20px;
   text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
   line-height: 28px;
   color: #FFFFFF;
   text-align: center;
@@ -2315,8 +2327,11 @@ a {
   }
 }
 .our_team_container--worker_name {
+  margin: 0;
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
   line-height: 25px;
   text-align: center;
   color: #181818;
@@ -2435,6 +2450,8 @@ a {
   padding-bottom: 13px;
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
@@ -2493,6 +2510,8 @@ a {
   padding-left: 23px;
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
   line-height: 23px;
   color: #181818;
   margin: 0;
@@ -2576,6 +2595,8 @@ a {
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 20px;
   line-height: 28px;
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -2786,6 +2807,8 @@ a {
   margin: 0 auto;
   font-family: "Yeseva One", "Georgia", serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;

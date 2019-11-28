@@ -1274,6 +1274,8 @@
   font-family: $FuturaDemiC;
   font-size: 20px;
   line-height: 25px;
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
   color: $white-color;
 }
@@ -1451,6 +1453,8 @@
     font-size: 22px;
     line-height: 30px;
     text-align: center;
+    font-style: normal;
+    font-weight: normal;
     text-transform: uppercase;
     color: $font-yellow-color;
   }
@@ -1630,6 +1634,8 @@
     font-family: $YesevaOne;
     font-size: 20px;
     line-height: 28px;
+    font-style: normal;
+    font-weight: normal;
     text-align: center;
     text-transform: uppercase;
     color: $black-color;
@@ -1753,6 +1759,8 @@
     font-family: $YesevaOne;
     font-size: 18px;
     line-height: 25px;
+    font-style: normal;
+    font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
     color: $black-background;
@@ -1852,6 +1860,8 @@
     display: inline-block;
     margin: 18px 58px 92px 0;
     font-family: $YesevaOne;
+    font-style: normal;
+    font-weight: normal;
     font-size: 27px;
     line-height: 37px;
     text-transform: uppercase;
@@ -2038,6 +2048,8 @@
     font-family: $YesevaOne;
     font-size: 20px;
     text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
     line-height: 28px;
     color: $white-color;
     text-align: center;
@@ -2147,8 +2159,11 @@
   }
 
   &--worker_name {
+    margin: 0;
     font-family: $YesevaOne;
     font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
     line-height: 25px;
     text-align: center;
 
@@ -2272,6 +2287,8 @@
     padding-bottom: 13px;
     font-family: $YesevaOne;
     font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
@@ -2340,6 +2357,8 @@
     padding-left: 23px;
     font-family: $YesevaOne;
     font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
     line-height: 23px;
     color: $black-color;
     margin: 0;
@@ -2429,6 +2448,8 @@
     font-family: $YesevaOne;
     font-size: 20px;
     line-height: 28px;
+    font-style: normal;
+    font-weight: normal;
     text-align: center;
     text-transform: uppercase;
 
@@ -2642,6 +2663,8 @@
     margin: 0 auto;
     font-family: $YesevaOne;
     font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
