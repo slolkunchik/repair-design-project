@@ -8,13 +8,14 @@
   }
 
   &--aside_instagram_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 82px;
     height: 100%;
     padding-bottom: 83px;
 
     background-color: $dark-background-color;
-
-    @include flex();
 
     @media (max-width: 991.98px) {
       display: none;
@@ -27,8 +28,8 @@
     left: 0;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 247px;
     height: 97px;
 
@@ -37,6 +38,10 @@
     @media (max-width:991.98px) {
       display: none;
     }
+  }
+
+  &--scroll_down_link {
+    cursor: pointer;
   }
 
   &--scroll_down_text {
@@ -50,6 +55,8 @@
     color: $white-color;
     text-transform: uppercase;
 
+    cursor: pointer;
+
     &:hover {
       color: $font-yellow-color;
     }
@@ -58,6 +65,8 @@
   &--scroll_down_button:hover {
     width: 35px;
     height: 35px;
+
+    cursor: pointer;
   }
 }
 
@@ -70,17 +79,26 @@
     line-height: 16px;
     font-family: $FuturaDemiC;
     text-align: center;
-    color: $font-yellow-color;
     text-transform: uppercase;
 
     transform: rotate(90deg);
   }
+
   &--aside_vector {
     display: block;
     margin: 77px auto 0 auto;
   }
+
   &--link:hover {
     color: $white-color;
+  }
+
+  &--link {
+    color: $font-yellow-color;
+
+    cursor: pointer;
+
+    text-decoration-color: none;
   }
 }
 .main_img {
@@ -174,6 +192,7 @@
     background-color: Transparent;
     border: 1px solid $white-color;
     border-radius: 2px;
+    cursor: pointer;
 
     @media (max-width: 575.98px) {
       display: block;

@@ -9,10 +9,11 @@
   padding-right: 59px;
   padding-left: 99px;
 
-  background: url("../assets/images/styles-background.png");
+  background-image: url("../assets/images/styles-background.png");
   background-size: cover;
   @media (max-width: 991.98px) {
-    margin-bottom: 0;
+    margin-bottom: -1px;
+    background-color: $mobile-black-bg;
   }
   @media (max-width: 575.98px) {
     display: none;

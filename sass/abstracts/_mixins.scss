@@ -10,12 +10,31 @@
   align-items: center;
 };
 
+@mixin inputCheckbox {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+
+  display: none;
+  width: 4px;
+  height: 6px;
+
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+};
+
 @mixin navigationBar {
   height: 83px;
   padding: 0 100px 0 82px;
 
   background-color: $dark-background-color;
-  background-size: cover;@include flex;
+  background-size: cover;
+
+  @include flex;
 
   @media (max-width: 991.98px) {
     padding: 0 18px 0 18px;
@@ -60,7 +79,11 @@
   }
   &--ul {
     width: 100%;
-    padding: 0 10px;@include flex();
+    padding: 0 10px;
+
+    list-style-type: none;
+
+    @include flex();
   }
 
   &--link_item {
@@ -126,6 +149,7 @@
     border: 0;
     border-radius: 2px;
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+    cursor: pointer;
     &:hover {
       color: $dark-background-color;
     }
@@ -135,5 +159,3 @@
     }
   }
 };
-
-
